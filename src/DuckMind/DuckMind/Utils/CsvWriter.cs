@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace DuckMind.Utilities {
+namespace DuckMind.Utils {
     public class CsvWriter {
         private Stream outStream;
         private StreamWriter sw;
