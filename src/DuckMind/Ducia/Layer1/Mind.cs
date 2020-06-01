@@ -22,7 +22,7 @@ namespace Ducia.Layer1 {
 
         public int consciousnessSleep = 100;
         private Task consciousnessTask;
-        private CancellationTokenSource conciousnessCancel;
+        protected CancellationTokenSource cancelToken;
 
         public Mind(TState state) {
             this.state = state;
@@ -33,7 +33,7 @@ namespace Ducia.Layer1 {
 
             // mind systems
             var cts = new CancellationTokenSource();
-            conciousnessCancel = cts;
+            cancelToken = cts;
 
             // start processing tasks
             if (useThreadPool) {
@@ -81,7 +81,7 @@ namespace Ducia.Layer1 {
 
             // stop processing tasks
             if (consciousnessTask != null) {
-                conciousnessCancel.Cancel();
+                cancelToken.Cancel();
             }
         }
 
