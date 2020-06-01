@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DuckMind.Debugging {
+namespace DuckMind.Utils {
     public class DebugStore {
         public static Dictionary<string, Table> tables;
 
