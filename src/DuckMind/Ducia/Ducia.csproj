@@ -2,20 +2,23 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>8</LangVersion>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Framework" />
+        <Folder Include="Framework" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="C5" Version="3.0.0-beta" />
+        <PackageReference Include="C5" Version="3.0.0-beta" />
+        <PackageReference Include="Iri.XGOAP" Version="1.0.1" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\..\Glint\src\Glint\Glint.csproj" />
-      <ProjectReference Include="..\..\..\..\Glint\src\XNez.GUtils\XNez.GUtils.csproj" />
-      <ProjectReference Include="..\..\..\..\XNez\Nez.Portable\XNez.csproj" />
+        <ProjectReference Include="..\..\..\..\Glint\src\Glint\Glint.csproj" />
+        <ProjectReference Include="..\..\..\..\Glint\src\XNez.GUtils\XNez.GUtils.csproj" />
+        <ProjectReference Include="..\..\..\..\XNez\Nez.Portable\XNez.csproj" />
     </ItemGroup>
 
 </Project>

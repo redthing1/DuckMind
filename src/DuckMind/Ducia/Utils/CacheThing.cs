@@ -3,15 +3,20 @@ namespace Ducia.Utils {
     /// Represents a cached object for the AI.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class CacheThing<T> {
+    public readonly struct CacheThing<T> {
         /// <summary>
         /// The cached value to store
         /// </summary>
-        public T val;
+        public readonly T val;
         /// <summary>
         /// A key indicating the state of the cache
         /// </summary>
-        public object key;
+        public readonly object key;
+
+        public CacheThing(T value, object key) {
+            this.val = value;
+            this.key = key;
+        }
 
         /// <summary>
         /// Compares a value to the cache key to check if the cached value is still valid

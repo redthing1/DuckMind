@@ -5,10 +5,10 @@ namespace Ducia.Framework.Utility.Considerations {
     public abstract class Consideration<T> {
         public Action action;
         protected List<Appraisal<T>> appraisals = new List<Appraisal<T>>();
-        public virtual string tag { get; }
+        public virtual string? tag { get; }
         public Dictionary<Appraisal<T>, float> lastScores = new Dictionary<Appraisal<T>, float>();
 
-        public Consideration(Action action, string tag = null) {
+        public Consideration(Action action, string? tag = null) {
             this.action = action;
             this.tag = tag;
         }

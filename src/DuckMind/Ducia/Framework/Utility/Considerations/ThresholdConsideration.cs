@@ -8,7 +8,7 @@ namespace Ducia.Framework.Utility.Considerations {
     public class ThresholdConsideration<T> : Consideration<T> {
         private float threshold;
 
-        public ThresholdConsideration(Action action, float threshold, string tag = null) : base(action, tag) {
+        public ThresholdConsideration(Action action, float threshold, string? tag = null) : base(action, tag) {
             this.threshold = threshold;
         }
 

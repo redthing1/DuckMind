@@ -16,13 +16,13 @@ namespace Ducia.Layer1 {
         public static bool useThreadPool { get; set; }
 
         public TState state;
-        public List<IMindSystem> sensorySystems;
-        public List<IMindSystem> cognitiveSystems;
+        public List<IMindSystem> sensorySystems = new List<IMindSystem>();
+        public List<IMindSystem> cognitiveSystems = new List<IMindSystem>();
         public bool inspected = false;
 
         public int consciousnessSleep = 100;
-        private Task consciousnessTask;
-        protected CancellationTokenSource cancelToken;
+        private Task? consciousnessTask;
+        protected CancellationTokenSource? cancelToken;
 
         public Mind(TState state) {
             this.state = state;
@@ -81,7 +81,7 @@ namespace Ducia.Layer1 {
 
             // stop processing tasks
             if (consciousnessTask != null) {
-                cancelToken.Cancel();
+                cancelToken!.Cancel();
             }
         }
 

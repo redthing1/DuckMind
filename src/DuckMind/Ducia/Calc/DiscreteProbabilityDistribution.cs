@@ -31,7 +31,7 @@ namespace Ducia.Calc {
                 sum += prob;
             }
 
-            return default;
+            return default!;
         }
     }
 }

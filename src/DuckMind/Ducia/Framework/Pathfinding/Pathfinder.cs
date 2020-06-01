@@ -15,7 +15,7 @@ namespace Ducia.Framework.Pathfinding {
                 get { return g + h; }
             }
 
-            public IPriorityQueueHandle<Node> pqHandle;
+            public IPriorityQueueHandle<Node>? pqHandle;
 
             public Node(int x, int y, int g, int h, Node parent) {
                 this.X = x;
@@ -38,12 +38,12 @@ namespace Ducia.Framework.Pathfinding {
             _nodeGrid = new Node[_size.X, _size.Y];
         }
 
-        public List<Point> findPath() {
+        public List<Point>? findPath() {
             if (_start == _goal) return new List<Point>();
 
             // add the start node to the open list
             _openList.Add(_nodeGrid[_start.X, _start.Y] =
-                new Node(_start.X, _start.Y, 0, Point.mhDist(_goal, _start), null));
+                new Node(_start.X, _start.Y, 0, Point.mhDist(_goal, _start), null!));
 
             var curNode = default(Node);
             while (!_openList.IsEmpty) {
