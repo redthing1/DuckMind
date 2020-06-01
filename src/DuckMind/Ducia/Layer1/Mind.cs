@@ -22,22 +22,19 @@ namespace Ducia.Layer1 {
 
         public int consciousnessSleep = 100;
         private Task? consciousnessTask;
-        protected CancellationTokenSource? cancelToken;
+        protected CancellationTokenSource cancelToken;
 
         public Mind(TState state) {
             this.state = state;
+            cancelToken = new CancellationTokenSource();
         }
 
         public override void OnAddedToEntity() {
             base.OnAddedToEntity();
 
-            // mind systems
-            var cts = new CancellationTokenSource();
-            cancelToken = cts;
-
             // start processing tasks
             if (useThreadPool) {
-                consciousnessTask = Task.Run(async () => await consciousnessAsync(cts.Token), cts.Token);
+                consciousnessTask = Task.Run(async () => await consciousnessAsync(cancelToken.Token), cancelToken.Token);
             }
         }
 
