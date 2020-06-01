@@ -1,6 +1,6 @@
 using System.Collections.Concurrent;
 
-namespace Ducia.Layer1 {
+namespace Ducia {
     public abstract class MindState {
         public int ticks = 0;
         public float totalTime = 0f;

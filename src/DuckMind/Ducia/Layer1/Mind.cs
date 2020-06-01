@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Glint;
 using Nez;
 
-namespace Ducia.Layer1 {
+namespace Ducia {
     /// <summary>
     /// represents the consciousness of a Wing.
     /// it can fully control the thoughts and actions of a bird.

@@ -1,7 +1,7 @@
 using System.Threading;
 using Nez;
 
-namespace Ducia.Layer1 {
+namespace Ducia {
     public interface IMindSystem {
         bool tick();
     }

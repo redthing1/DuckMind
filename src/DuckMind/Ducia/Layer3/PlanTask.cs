@@ -1,6 +1,6 @@
 using Nez;
 
-namespace Ducia.Layer3 {
+namespace Ducia {
     public abstract class PlanTask {
         public enum Status {
             /// <summary>

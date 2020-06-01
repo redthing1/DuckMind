@@ -1,6 +1,6 @@
 using Nez;
 
-namespace Ducia.Layer3 {
+namespace Ducia {
     public abstract class PlanInteraction<TMind> : PlanTask<TMind> {
         public Entity[] interactees;
         private bool done = false;

@@ -1,6 +1,6 @@
 using Nez;
 
-namespace Ducia.Layer3 {
+namespace Ducia {
     public class SingleInteraction<TMind> : PlanInteraction<TMind> {
         public Entity target;
 

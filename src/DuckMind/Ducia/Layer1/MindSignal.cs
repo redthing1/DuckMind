@@ -1,3 +1,3 @@
-namespace Ducia.Layer1 {
+namespace Ducia {
     public abstract class MindSignal { }
 }
