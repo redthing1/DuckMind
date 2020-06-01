@@ -4,4 +4,18 @@
         <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Framework" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="C5" Version="3.0.0-beta" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\Glint\src\Glint\Glint.csproj" />
+      <ProjectReference Include="..\..\..\..\Glint\src\XNez.GUtils\XNez.GUtils.csproj" />
+      <ProjectReference Include="..\..\..\..\XNez\Nez.Portable\XNez.csproj" />
+    </ItemGroup>
+
 </Project>
