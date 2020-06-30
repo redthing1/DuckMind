@@ -13,11 +13,11 @@ namespace Ducia {
     public abstract class Mind<TState> : Component, IUpdatable
         where TState : MindState, new() {
         // - options
-        public static bool useThreadPool { get; set; }
+        protected static bool useThreadPool { get; set; }
 
-        public TState state;
-        public List<IMindSystem> sensorySystems = new List<IMindSystem>();
-        public List<IMindSystem> cognitiveSystems = new List<IMindSystem>();
+        public readonly TState state;
+        protected List<IMindSystem> sensorySystems = new List<IMindSystem>();
+        protected List<IMindSystem> cognitiveSystems = new List<IMindSystem>();
         public bool inspected = false;
 
         public int consciousnessSleep = 100;
@@ -45,7 +45,7 @@ namespace Ducia {
             think();
         }
 
-        public async Task consciousnessAsync(CancellationToken tok) {
+        private async Task consciousnessAsync(CancellationToken tok) {
             while (!tok.IsCancellationRequested) {
                 consciousnessStep();
 
