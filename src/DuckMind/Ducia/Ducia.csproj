@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <Folder Include="Framework" />
+        <Folder Include="Layers" />
     </ItemGroup>
 
     <ItemGroup>
