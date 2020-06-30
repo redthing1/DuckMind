@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuckMind", "DuckMind\DuckMind.csproj", "{FC90F01C-68DB-4FF1-9435-67822C14C78A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia", "Ducia\Ducia.csproj", "{332D270C-22D2-4B82-A6C8-B190E6B6F88A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindDemos", "MindDemos\MindDemos.csproj", "{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FC90F01C-68DB-4FF1-9435-67822C14C78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC90F01C-68DB-4FF1-9435-67822C14C78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC90F01C-68DB-4FF1-9435-67822C14C78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC90F01C-68DB-4FF1-9435-67822C14C78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
