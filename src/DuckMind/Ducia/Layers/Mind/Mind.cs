@@ -57,10 +57,12 @@ namespace Ducia {
 
         public void Update() {
             // Sense-Think-Act AI
+            
+            // AUTONOMOUS pipeline - sense
             sense(); // sense the world around
-            act(); // carry out decisions();
 
             // if thread-pooled AI is disabled, do synchronous consciousness
+            // this runs the CONSCIOUS pipeline on the AUTONOMOUS pipeline's thread
             if (!useThreadPool && consciousnessTask == null) {
                 var msPassed = (int) (Time.DeltaTime * 1000);
                 var thinkModulus = consciousnessSleep / msPassed;
@@ -68,6 +70,9 @@ namespace Ducia {
                     consciousnessStep();
                 }
             }
+            
+            // AUTONOMOUS pipeline - act
+            act(); // carry out decisions;
 
             // update state information
             state.tick(Time.DeltaTime);
