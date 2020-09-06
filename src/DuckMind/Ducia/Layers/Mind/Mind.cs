@@ -13,7 +13,7 @@ namespace Ducia {
     public abstract class Mind<TState> : Component, IUpdatable
         where TState : MindState, new() {
         // - options
-        protected static bool useThreadPool { get; set; } = true;
+        public static bool useThreadPool { get; set; } = true;
 
         public readonly TState state;
         protected List<IMindSystem> sensorySystems = new List<IMindSystem>();
