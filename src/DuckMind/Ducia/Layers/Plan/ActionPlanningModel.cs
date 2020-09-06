@@ -2,7 +2,13 @@ using Activ.GOAP;
 
 namespace Ducia {
     public abstract class ActionPlanningModel<T> : Agent, Clonable<T> where T : new() {
-        public float cost { get; set; }
+        private float _cost;
+
+        public float cost {
+            get { return _cost; }
+            set { _cost = value; }
+        }
+
         private Option[]? cachedOpts; // caching reduces array alloc overheads
         public Option[] Options() => cachedOpts ??= ActionOptions;
         public abstract Option[] ActionOptions { get; }
