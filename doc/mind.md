@@ -16,6 +16,11 @@ systems are divided into _sensory_ and _cognitive_ systems:
 + **sensory** systems run during the _sense_  phase, and serve to gather information about the environment and store it in working memory for quick access
 + **cognitive** systems run during the _think_ phase, and run the planning algorithms to make decisions and plans based on available information
 
+### example systems: Sor
+
++ the [Vision](https://github.com/xdrie/Sor/blob/main/src/Sor/Sor/AI/Systems/VisionSystem.cs) system is a basic _sensory_ system that detects nearby birds and stores the results in working memory.
++ the [Think](https://github.com/xdrie/Sor/blob/main/src/Sor/Sor/AI/Systems/ThinkSystem.cs) system is a `PlannerSystem`, which is a type of _cognitive_ system that uses a utility reasoner to make decisions.
+
 ## pipelines
 
 the mind has two main pipelines: the _autonomous_ pipeline and the _conscious_ pipeline.
@@ -31,5 +36,3 @@ generally, the conscious pipeline is offloaded to the thread pool, and runs asyn
 thread-pooling is enabled by default, but can be disabled by setting `Mind.useThreadPool` to `false`. when thread-pooling is disabled, the conscious pipeline will be run between the _sense_ and _act_ phases on the autonomous pipeline's thread, usually the main thread.
 
 since working memory is cached in the MindState, this pipeline can generally work completely independently of the autonomous pipeline. when results are ready, it can use message queues in the MindState to pass information to the _act_ phase.
-
-
