@@ -34,6 +34,11 @@ namespace Ducia {
         /// </summary>
         public int consciousnessSleep = 100;
 
+        /// <summary>
+        /// internally used to track consciousness updates only when threadpool is disabled
+        /// </summary>
+        private float nextSyncConsciousness = 0;
+
         public Mind(TState state) {
             this.state = state;
             cancelToken = new CancellationTokenSource();
@@ -66,11 +71,10 @@ namespace Ducia {
             // if thread-pooled AI is disabled, do synchronous consciousness
             // this runs the CONSCIOUS pipeline on the AUTONOMOUS pipeline's thread
             if (!useThreadPool && consciousnessTask == null) {
-                var msPassed = (int) (dt * 1000);
-                var thinkModulus = consciousnessSleep / msPassed;
-                if (ticks % thinkModulus == 0) {
+                if (elapsed >= nextSyncConsciousness) {
                     consciousnessStep();
                 }
+                nextSyncConsciousness = consciousnessSleep / 1000f;
             }
 
             // AUTONOMOUS pipeline - act
