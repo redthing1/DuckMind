@@ -8,7 +8,6 @@
 
     <ItemGroup>
         <Folder Include="Framework" />
-        <Folder Include="Layers" />
     </ItemGroup>
 
     <ItemGroup>
@@ -17,9 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\..\Glint\src\Glint\Glint.csproj" />
         <ProjectReference Include="..\..\..\..\Glint\src\XNez.GUtils\XNez.GUtils.csproj" />
-        <ProjectReference Include="..\..\..\..\XNez\Nez.Portable\XNez.csproj" />
     </ItemGroup>
 
 </Project>

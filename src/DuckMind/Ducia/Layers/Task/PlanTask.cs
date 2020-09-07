@@ -1,6 +1,4 @@
-using Nez;
-
-namespace Ducia {
+namespace Ducia.Game {
     public abstract class PlanTask {
         public enum Status {
             /// <summary>
@@ -25,7 +23,7 @@ namespace Ducia {
         }
     }
 
-    public abstract class PlanTask<TMind> : PlanTask {
+    public abstract class PlanTask<TMind> : PlanTask where TMind : IMind {
         protected readonly TMind mind;
         public float failureTime = 0f;
 
@@ -40,7 +38,7 @@ namespace Ducia {
         /// <returns></returns>
         public virtual Status status() {
             if (failureTime <= 0) return Status.Ongoing;
-            return Time.TotalTime < failureTime ? Status.Ongoing : Status.Failed;
+            return mind.elapsed < failureTime ? Status.Ongoing : Status.Failed;
         }
     }
 }

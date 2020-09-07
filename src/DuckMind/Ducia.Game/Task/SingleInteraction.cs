@@ -1,7 +1,7 @@
 using Nez;
 
-namespace Ducia {
-    public class SingleInteraction<TMind> : PlanInteraction<TMind> {
+namespace Ducia.Game {
+    public class SingleInteraction<TMind> : PlanInteraction<TMind> where TMind : IMind {
         public Entity target;
 
         public SingleInteraction(TMind mind, Entity target, float before = 0) : base(mind, new[] {target}, before) {
