@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia", "Ducia\Ducia.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindDemos", "MindDemos\MindDemos.csproj", "{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia.Tests", "Ducia.Tests\Ducia.Tests.csproj", "{E2A30787-0AD3-47AF-96BD-64F892B90CA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
