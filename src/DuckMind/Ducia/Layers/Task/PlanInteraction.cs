@@ -1,5 +1,3 @@
-using Nez;
-
 namespace Ducia {
     public abstract class PlanInteraction<TMind> : PlanTask<TMind> {
         public Entity[] interactees;

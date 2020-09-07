@@ -1,5 +1,3 @@
-using Nez;
-
 namespace Ducia {
     public class SingleInteraction<TMind> : PlanInteraction<TMind> {
         public Entity target;
