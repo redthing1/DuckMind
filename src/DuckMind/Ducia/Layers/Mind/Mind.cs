@@ -10,19 +10,27 @@ namespace Ducia {
     public abstract class Mind<TState> where TState : MindState, new() {
         // - options
         public static bool useThreadPool { get; set; } = true;
-        
+
         // - state
         public readonly TState state;
-        protected int ticks;
-        protected float elapsed = 0;
-        
+
+        /// <summary>
+        /// the number of ticks
+        /// </summary>
+        public int ticks { get; private set; }
+
+        /// <summary>
+        /// the elapsed time within this mind
+        /// </summary>
+        public float elapsed { get; private set; } = 0;
+
         // - systems
         protected List<IMindSystem> sensorySystems = new List<IMindSystem>();
         protected List<IMindSystem> cognitiveSystems = new List<IMindSystem>();
 
         private Task? consciousnessTask;
         protected CancellationTokenSource cancelToken;
-        
+
         /// <summary>
         /// how often to sleep between consciousness updates
         /// </summary>
@@ -36,10 +44,11 @@ namespace Ducia {
         public void initialize() {
             // start processing tasks
             if (useThreadPool) {
-                consciousnessTask = Task.Run(async () => await consciousnessAsync(cancelToken.Token), cancelToken.Token);
+                consciousnessTask =
+                    Task.Run(async () => await consciousnessAsync(cancelToken.Token), cancelToken.Token);
             }
         }
-        
+
         public void destroy() {
             // stop processing tasks
             if (consciousnessTask != null) {
@@ -50,9 +59,9 @@ namespace Ducia {
         public void tick(float dt) {
             elapsed += dt;
             ticks++;
-            
+
             // Sense-Think-Act AI
-            
+
             // AUTONOMOUS pipeline - sense
             sense(); // sense the world around
 
@@ -65,7 +74,7 @@ namespace Ducia {
                     consciousnessStep();
                 }
             }
-            
+
             // AUTONOMOUS pipeline - act
             act(); // carry out decisions;
 
