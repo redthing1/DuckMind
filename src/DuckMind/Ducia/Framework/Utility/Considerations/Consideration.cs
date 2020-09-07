@@ -18,10 +18,7 @@ namespace Ducia.Framework.Utility.Considerations {
         }
 
         protected float scoreAppraisal(Appraisal<T> appraisal) {
-            var score = appraisal.score();
-            if (appraisal.transform != null) {
-                score = appraisal.transform(score);
-            }
+            var score = appraisal.transformedScore();
 
             lastScores[appraisal] = score; // log last score
 

@@ -50,19 +50,19 @@ namespace Ducia.Tests.Framework.Utility {
 
             // raw score
             var basic = new BalloonAppraisal(carp1);
-            Assert.Equal(0.6f, basic.score());
+            Assert.Equal(0.6f, basic.transformedScore(), 4);
 
             var clamped = new BalloonAppraisal(carp1).clamp(0.3f);
-            Assert.Equal(0.3f, clamped.score());
+            Assert.Equal(0.3f, clamped.transformedScore(), 4);
 
             var inverted = new BalloonAppraisal(carp1).inverse();
-            Assert.Equal(0.4f, inverted.score());
+            Assert.Equal(0.4f, inverted.transformedScore(), 4);
 
             var negated = new BalloonAppraisal(carp1).negate();
-            Assert.Equal(-0.6f, negated.score());
+            Assert.Equal(-0.6f, negated.transformedScore(), 4);
 
             var clampedNegated = new BalloonAppraisal(carp1).clamp(0.3f).negate();
-            Assert.Equal(-0.3f, clampedNegated.score());
+            Assert.Equal(-0.3f, clampedNegated.transformedScore(), 4);
         }
 
         [Fact]
