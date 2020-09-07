@@ -40,11 +40,11 @@ namespace Ducia.Tests.Framework.Utility {
                 var bakeableCakes = context.flour / CakeGame.FLOUR_PER_CAKE;
                 // where we're really getting close to running out
                 var superLow = 2f;
-                if (bakeableCakes <= superLow) return 1; // max activation
+                if (bakeableCakes <= superLow) return 1f; // max activation
                 // distance  to super low
                 var dist = bakeableCakes - superLow;
                 // the further we are, the lower the activation 
-                var distProp = 1 / dist;
+                var distProp = 1f / dist;
                 // scale on square root curve
                 return GMathf.pow(distProp, 0.5f);
             }
