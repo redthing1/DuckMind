@@ -18,7 +18,16 @@ namespace Ducia.Tests.Framework.Utility {
         [Fact]
         public void canWinCakeGame() {
             Assert.True(game.cakesBaked == 0);
-            game.run(50);
+            var win = game.run(50);
+            Assert.True(win);
+            Assert.True(game.cakesBaked > 0);
+        }
+        
+        [Fact]
+        public void canWinCakeGameManyIterations() {
+            Assert.True(game.cakesBaked == 0);
+            var win = game.run(10000);
+            Assert.True(win);
             Assert.True(game.cakesBaked > 0);
         }
     }
