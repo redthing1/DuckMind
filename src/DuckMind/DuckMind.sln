@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia.Tests", "Ducia.Tests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia.Game", "Ducia.Game\Ducia.Game.csproj", "{B67F7FE6-2F7C-482E-8C5A-BF91A19E1414}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia.Perf", "Ducia.Perf\Ducia.Perf.csproj", "{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{B67F7FE6-2F7C-482E-8C5A-BF91A19E1414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B67F7FE6-2F7C-482E-8C5A-BF91A19E1414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B67F7FE6-2F7C-482E-8C5A-BF91A19E1414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
