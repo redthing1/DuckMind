@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using XNez.GUtils.Misc;
 
 namespace Ducia.Framework.Utility {
@@ -8,7 +10,7 @@ namespace Ducia.Framework.Utility {
         /// <summary>
         /// a utility to attach a "postprocess/transform" function to the score
         /// </summary>
-        public Func<float, float>? transform;
+        private List<Func<float, float>> transforms = new List<Func<float, float>>();
 
         public Appraisal(T context) {
             this.context = context;
@@ -18,25 +20,25 @@ namespace Ducia.Framework.Utility {
 
         public float transformedScore() {
             var val = score();
-            if (transform != null) {
-                val = transform(val);
+            if (transforms.Any()) {
+                val = transforms.Aggregate(val, (last, func) => func(last));
             }
 
             return val;
         }
 
         public Appraisal<T> negate() {
-            transform += v => -v;
+            transforms.Add(v => -v);
             return this;
         }
 
         public Appraisal<T> inverse() {
-            transform += v => (1f - v);
+            transforms.Add(v => (1f - v));
             return this;
         }
 
         public Appraisal<T> clamp(float limit) {
-            transform += v => GMathf.clamp(v, 0, limit);
+            transforms.Add(v => GMathf.clamp(v, 0, limit));
             return this;
         }
     }
