@@ -6,19 +6,22 @@ namespace Ducia.Perf.Layers.Plan {
     public class BasicVsSmartPlanner {
         private BasicRoomCleaner basicCleaner;
         private SmartRoomCleaner smartCleaner;
-        private byte[] data;
+        private int workGoal;
 
-        [Params(100, 1000, 10000)] public int workGoal;
+        [Params(100, 1000, 10000)] public int N;
 
         [GlobalSetup]
         public void Setup() {
             basicCleaner = new BasicRoomCleaner();
             smartCleaner = new SmartRoomCleaner();
+
+            workGoal = N;
         }
 
         [Benchmark]
         public Node<BasicRoomCleaner>[] solveBasicCleaner() {
             var solver = new Solver<BasicRoomCleaner>();
+            solver.maxIter = solver.maxNodes = workGoal * 10; // unlock
             var plan = solver.Next(basicCleaner, new Goal<BasicRoomCleaner>(x => x.workDone >= workGoal));
             return plan.Path();
         }
@@ -26,6 +29,7 @@ namespace Ducia.Perf.Layers.Plan {
         [Benchmark]
         public Node<SmartRoomCleaner>[] solveSmartCleaner() {
             var solver = new Solver<SmartRoomCleaner>();
+            solver.maxIter = solver.maxNodes = workGoal * 10; // unlock
             var plan = solver.Next(smartCleaner, new Goal<SmartRoomCleaner>(x => x.workDone >= workGoal));
             return plan.Path();
         }
