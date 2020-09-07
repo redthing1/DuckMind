@@ -1,17 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Glint;
-using Nez;
 
 namespace Ducia {
     /// <summary>
     /// represents the consciousness of a Wing.
     /// it can fully control the thoughts and actions of a bird.
     /// </summary>
-    public abstract class Mind<TState> : Component, IUpdatable
-        where TState : MindState, new() {
+    public abstract class Mind<TState> where TState : MindState, new() {
         // - options
         public static bool useThreadPool { get; set; } = true;
         
@@ -35,12 +31,6 @@ namespace Ducia {
         public Mind(TState state) {
             this.state = state;
             cancelToken = new CancellationTokenSource();
-        }
-
-        public override void OnAddedToEntity() {
-            base.OnAddedToEntity();
-            
-            initialize();
         }
 
         public void initialize() {
@@ -97,20 +87,6 @@ namespace Ducia {
                 await Task.Delay(consciousnessSleep, tok);
             }
         }
-
-        #region Component Implementation
-
-        public void Update() {
-            tick(Time.DeltaTime);
-        }
-
-        public override void OnRemovedFromEntity() {
-            base.OnRemovedFromEntity();
-
-            destroy();
-        }
-
-        #endregion
 
         protected virtual void act() { }
 
