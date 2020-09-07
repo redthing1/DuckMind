@@ -4,10 +4,10 @@ namespace Ducia.Tests.Layers.Plan {
     /// <summary>
     /// picking flowers
     /// </summary>
-    public class FlowerPicker : ActionPlanningModel<FlowerPicker> {
+    public class FlowerPicker : SmartActionPlanningModel<FlowerPicker> {
         // - state
-        public int flowersPicked = 0;
-        public int bucket = 0;
+        public int flowersPicked { get; set; } = 0;
+        public int bucket { get; set; } = 0;
 
         // - const
         public const int BUCKET_CAPACITY = 4;
@@ -38,24 +38,5 @@ namespace Ducia.Tests.Layers.Plan {
             // cost
             return DUMP_COST;
         }
-
-        #region Type Overrides
-
-        public override FlowerPicker Clone(FlowerPicker b) {
-            b.flowersPicked = flowersPicked;
-            b.bucket = bucket;
-
-            return b;
-        }
-
-        public override bool Equals(FlowerPicker b) {
-            return b.flowersPicked == flowersPicked && b.bucket == bucket;
-        }
-
-        public override int GetHashCode() {
-            return (flowersPicked, bucket).GetHashCode();
-        }
-
-        #endregion
     }
 }

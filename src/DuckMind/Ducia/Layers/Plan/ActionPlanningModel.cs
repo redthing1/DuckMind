@@ -2,6 +2,11 @@ using System;
 using Activ.GOAP;
 
 namespace Ducia {
+    /// <summary>
+    /// represents a base action planning model for an agent
+    /// this will be fed into a GOAP planner
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class ActionPlanningModel<T> : Agent, Clonable<T>, IEquatable<T> where T : new() {
         protected abstract Option[] ActionOptions { get; }
 
