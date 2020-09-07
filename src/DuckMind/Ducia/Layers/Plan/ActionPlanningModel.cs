@@ -6,7 +6,6 @@ namespace Ducia {
         public Option[] Options() => cachedOpts ??= ActionOptions;
         public abstract Option[] ActionOptions { get; }
         public T Allocate() => new T();
-
         public abstract T Clone(T b);
     }
 }

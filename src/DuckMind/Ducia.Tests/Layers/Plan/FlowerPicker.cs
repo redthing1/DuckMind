@@ -51,7 +51,12 @@ namespace Ducia.Tests.Layers.Plan {
         public override bool Equals(object? obj) {
             if (obj is FlowerPicker b) {
                 return b.flowersPicked == flowersPicked && b.bucket == bucket;
-            } else return false;
+            }
+            else return false;
+        }
+
+        public override int GetHashCode() {
+            return (flowersPicked, bucket).GetHashCode();
         }
 
         #endregion
