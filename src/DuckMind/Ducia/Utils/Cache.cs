@@ -3,7 +3,7 @@ namespace Ducia.Utils {
     /// Represents a cached object for the AI.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public readonly struct CacheThing<T> {
+    public readonly struct Cache<T> {
         /// <summary>
         /// The cached value to store
         /// </summary>
@@ -13,7 +13,7 @@ namespace Ducia.Utils {
         /// </summary>
         public readonly object key;
 
-        public CacheThing(T value, object key) {
+        public Cache(T value, object key) {
             this.val = value;
             this.key = key;
         }
