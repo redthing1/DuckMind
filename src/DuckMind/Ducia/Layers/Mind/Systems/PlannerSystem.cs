@@ -31,8 +31,7 @@ namespace Ducia.Systems {
                 // if successfully handled, remove it from the queue
                 if (result) {
                     state.signalQueue.TryDequeue(out _);
-                }
-                else {
+                } else {
                     // signal failed to be handled
                     // ???
                     throw new InvalidMindStateException("signal failed to be processed");
@@ -57,7 +56,7 @@ namespace Ducia.Systems {
         /// <summary>
         /// preprocessing to run on results of sensory systems
         /// </summary>
-        protected abstract void processSenses();
+        protected virtual void processSenses() { }
 
         /// <summary>
         /// make plans based on available information
