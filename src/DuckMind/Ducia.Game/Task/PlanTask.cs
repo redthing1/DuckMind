@@ -1,4 +1,6 @@
-namespace Ducia {
+using Nez;
+
+namespace Ducia.Game {
     public abstract class PlanTask {
         public enum Status {
             /// <summary>

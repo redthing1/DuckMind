@@ -1,4 +1,6 @@
-namespace Ducia {
+using Nez;
+
+namespace Ducia.Game {
     public class SingleInteraction<TMind> : PlanInteraction<TMind> {
         public Entity target;
 
