@@ -1,4 +1,5 @@
 using System;
+using XNez.GUtils.Misc;
 
 namespace Ducia.Framework.Utility {
     public abstract class Appraisal<T> {
@@ -15,7 +16,12 @@ namespace Ducia.Framework.Utility {
         public abstract float score();
 
         public Appraisal<T> inverse() {
-            transform = v => (1f - v);
+            transform += v => (1f - v);
+            return this;
+        }
+        
+        public Appraisal<T> clamp(float limit) {
+            transform += v => GMathf.clamp(v, 0, limit);
             return this;
         }
     }

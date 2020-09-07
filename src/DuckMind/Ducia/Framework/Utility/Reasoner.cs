@@ -9,7 +9,13 @@ namespace Ducia.Framework.Utility {
         public ScoreType scoreType = ScoreType.Raw;
 
         public enum ScoreType {
+            /// <summary>
+            /// use raw sum of appraisals as the score
+            /// </summary>
             Raw,
+            /// <summary>
+            /// normalize the sum of the appraisals to the interval [0, 1]
+            /// </summary>
             Normalized
         }
 
