@@ -14,6 +14,11 @@ namespace Ducia.Framework.Utility {
         }
 
         public abstract float score();
+        
+        public Appraisal<T> negate() {
+            transform += v => -v;
+            return this;
+        }
 
         public Appraisal<T> inverse() {
             transform += v => (1f - v);

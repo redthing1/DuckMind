@@ -22,7 +22,7 @@ namespace Ducia.Tests.Framework.Utility {
 
             public override float score() {
                 // the point where we consider ourself fully backlogged
-                var bigBacklog = 4;
+                var bigBacklog = 4f;
                 var backlogProportion = context.orders / bigBacklog;
                 // clamp
                 return GMathf.clamp01(backlogProportion);

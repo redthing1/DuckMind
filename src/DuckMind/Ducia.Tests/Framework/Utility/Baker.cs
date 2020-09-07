@@ -25,7 +25,7 @@ namespace Ducia.Tests.Framework.Utility {
 
             var sleepConsid = new ThresholdSumConsideration<CakeGame>(game.sleepBed, 0.7f, "sleep");
             sleepConsid.addAppraisal(new Sleepy(game));
-            sleepConsid.addAppraisal(new Backlogged(game).clamp(0.5f).inverse());
+            sleepConsid.addAppraisal(new Backlogged(game).clamp(0.3f).negate());
             reasoner.addConsideration(sleepConsid);
 
             var bakeConsid = new SumConsideration<CakeGame>(game.bakeCake, "bake");
