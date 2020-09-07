@@ -19,8 +19,8 @@ namespace Ducia {
         public float elapsed { get; private set; } = 0;
 
         // - systems
-        protected List<IMindSystem> sensorySystems = new List<IMindSystem>();
-        protected List<IMindSystem> cognitiveSystems = new List<IMindSystem>();
+        public List<IMindSystem> sensorySystems = new List<IMindSystem>();
+        public List<IMindSystem> cognitiveSystems = new List<IMindSystem>();
 
         private Task? consciousnessTask;
 
