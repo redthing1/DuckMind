@@ -20,8 +20,13 @@ namespace Ducia.Framework.Utility {
 
         public float transformedScore() {
             var val = score();
-            if (transforms.Any()) {
-                val = transforms.Aggregate(val, (last, func) => func(last));
+            if (transforms.Count > 0) {
+                var v = val;
+                for (var i = 0; i < transforms.Count; i++) {
+                    v = transforms[i].Invoke(v);
+                }
+
+                val = v;
             }
 
             return val;

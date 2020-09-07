@@ -7,6 +7,11 @@ namespace Ducia.Framework.Utility {
         protected List<Consideration<T>> considerations = new List<Consideration<T>>();
         private static readonly Random random = new Random();
         public ScoreType scoreType = ScoreType.Raw;
+        
+        /// <summary>
+        /// whether to enable internal tracing
+        /// </summary>
+        public static bool trace = false;
 
         public enum ScoreType {
             /// <summary>

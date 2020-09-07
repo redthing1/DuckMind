@@ -20,7 +20,9 @@ namespace Ducia.Framework.Utility.Considerations {
         protected float scoreAppraisal(Appraisal<T> appraisal) {
             var score = appraisal.transformedScore();
 
-            lastScores[appraisal] = score; // log last score
+            if (Reasoner<T>.trace) {
+                lastScores[appraisal] = score; // log last score
+            }
 
             return score;
         }
