@@ -8,9 +8,9 @@ namespace Ducia.Tests.Layers.Mind {
 
         public MindTests() {
             mind = new BasicMind();
-            mind.initialize();
             // use single thread for tests
             BasicMind.useThreadPool = false;
+            mind.initialize();
         }
 
         [Fact]
