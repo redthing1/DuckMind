@@ -31,7 +31,7 @@ namespace Ducia {
         /// </summary>
         /// <returns>Whether process was called.</returns>
         public virtual bool tick() {
-            if (mind.elapsed > nextRefreshAt) {
+            if (mind.elapsed >= nextRefreshAt) {
                 nextRefreshAt = mind.elapsed + refresh;
                 process();
                 return true;
