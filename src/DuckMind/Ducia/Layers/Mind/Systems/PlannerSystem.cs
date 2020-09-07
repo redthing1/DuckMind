@@ -49,9 +49,9 @@ namespace Ducia.Systems {
         /// <summary>
         /// handle mind signals
         /// </summary>
-        /// <param name="result"></param>
+        /// <param name="signal"></param>
         /// <returns>whether the signal was handled</returns>
-        protected abstract bool processSignal(MindSignal result);
+        protected abstract bool processSignal(MindSignal signal);
 
         /// <summary>
         /// preprocessing to run on results of sensory systems
