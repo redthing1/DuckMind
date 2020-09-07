@@ -1,10 +1,10 @@
 using Nez;
 
 namespace Ducia.Game.Mind {
-    public class MindComponent<T> : Component, IUpdatable where T : MindState, new() {
-        public Mind<T> mind { get; }
+    public class MindComponent : Component, IUpdatable {
+        public IMind mind { get; }
 
-        public MindComponent(Mind<T> mind) {
+        public MindComponent(IMind mind) {
             this.mind = mind;
         }
 
