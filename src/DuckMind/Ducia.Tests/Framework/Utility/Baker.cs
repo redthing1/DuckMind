@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Ducia.Framework.Utility;
 using Ducia.Framework.Utility.Considerations;
 
@@ -14,8 +15,8 @@ namespace Ducia.Tests.Framework.Utility {
         public CakeGame game;
 
         public Baker(CakeGame game) {
-            buildReasoner();
             this.game = game;
+            buildReasoner();
         }
 
         private void buildReasoner() {
@@ -37,11 +38,16 @@ namespace Ducia.Tests.Framework.Utility {
         }
 
         public void act() {
-            var results = reasoner.execute();
+            var results = think();
             // choose the highest ranked option
             var chosen = reasoner.choose(results);
             // execute the action
             chosen.action();
+        }
+
+        public Dictionary<Consideration<CakeGame>, float> think() {
+            var results = reasoner.execute();
+            return results;
         }
     }
 }
