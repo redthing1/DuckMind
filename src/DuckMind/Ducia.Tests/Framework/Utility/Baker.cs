@@ -37,12 +37,14 @@ namespace Ducia.Tests.Framework.Utility {
             reasoner.addConsideration(shopConsid);
         }
 
-        public void act() {
+        public string act() {
             var results = think();
             // choose the highest ranked option
             var chosen = reasoner.choose(results);
             // execute the action
             chosen.action();
+            // return the tag
+            return chosen.tag;
         }
 
         public Dictionary<Consideration<CakeGame>, float> think() {

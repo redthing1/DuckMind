@@ -17,7 +17,9 @@ namespace Ducia.Tests.Framework.Utility {
 
         [Fact]
         public void canWinCakeGame() {
+            Assert.True(game.cakesBaked == 0);
             game.run(50);
+            Assert.True(game.cakesBaked > 0);
         }
     }
 }
