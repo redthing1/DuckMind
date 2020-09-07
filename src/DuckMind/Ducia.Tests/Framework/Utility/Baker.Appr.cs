@@ -10,7 +10,7 @@ namespace Ducia.Tests.Framework.Utility {
             public Sleepy(CakeGame context) : base(context) { }
 
             public override float score() {
-                return GMathf.pow(context.fatigue, 1.5f);
+                return GMathf.pow(context.fatigue, 0.6f);
             }
         }
 

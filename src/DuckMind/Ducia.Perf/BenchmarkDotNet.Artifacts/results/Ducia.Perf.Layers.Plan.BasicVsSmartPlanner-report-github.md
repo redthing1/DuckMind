@@ -8,11 +8,11 @@ AMD Ryzen 7 2700X, 1 CPU, 16 logical and 8 physical cores
 
 
 ```
-|            Method |     N |         Mean |      Error |     StdDev |
-|------------------ |------ |-------------:|-----------:|-----------:|
-| **solveBasicCleaner** |   **100** |     **27.35 μs** |   **0.191 μs** |   **0.169 μs** |
-| solveSmartCleaner |   100 |    288.07 μs |   1.036 μs |   0.919 μs |
-| **solveBasicCleaner** |  **1000** |    **287.20 μs** |   **2.273 μs** |   **2.126 μs** |
-| solveSmartCleaner |  1000 |  2,968.09 μs |  22.222 μs |  18.557 μs |
-| **solveBasicCleaner** | **10000** |  **5,546.40 μs** |  **95.693 μs** |  **84.830 μs** |
-| solveSmartCleaner | 10000 | 37,373.96 μs | 714.347 μs | 850.379 μs |
+|            Method |     N |         Mean |      Error |    StdDev |
+|------------------ |------ |-------------:|-----------:|----------:|
+| **solveBasicCleaner** |   **100** |     **27.28 μs** |   **0.271 μs** |  **0.241 μs** |
+| solveSmartCleaner |   100 |    280.18 μs |   1.040 μs |  0.973 μs |
+| **solveBasicCleaner** |  **1000** |    **283.07 μs** |   **2.504 μs** |  **2.220 μs** |
+| solveSmartCleaner |  1000 |  2,879.19 μs |   4.619 μs |  4.320 μs |
+| **solveBasicCleaner** | **10000** |  **5,582.31 μs** |  **76.297 μs** | **71.368 μs** |
+| solveSmartCleaner | 10000 | 36,450.59 μs | 116.019 μs | 96.881 μs |

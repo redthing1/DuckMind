@@ -41,5 +41,10 @@ namespace Ducia.Framework.Utility {
             transforms.Add(v => GMathf.clamp(v, 0, limit));
             return this;
         }
+
+        public Appraisal<T> scale(float scale) {
+            transforms.Add(v => scale * v);
+            return this;
+        }
     }
 }

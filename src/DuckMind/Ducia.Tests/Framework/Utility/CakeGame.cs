@@ -25,7 +25,12 @@ namespace Ducia.Tests.Framework.Utility {
         }
 
         public void bakeCake() {
-            for (int i = 0; i < CAKES_PER_SESSION && flour > FLOUR_PER_CAKE && orders > 0; i++) {
+            for (int i = 0;
+                i < CAKES_PER_SESSION
+                && flour > FLOUR_PER_CAKE // we have flour
+                && orders > 0 // we have an order
+                && fatigue < 1 - ENERGY_PER_CAKE; // we shouldn't collapse while baking
+                i++) {
                 // bake
                 flour -= FLOUR_PER_CAKE; // used flour
                 cakesBaked++; // got a cake

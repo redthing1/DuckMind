@@ -52,6 +52,9 @@ namespace Ducia.Tests.Framework.Utility {
 
             var clamped = new BalloonAppraisal(carp1).clamp(0.3f);
             Assert.Equal(0.3f, clamped.transformedScore(), 4);
+            
+            var scaled = new BalloonAppraisal(carp1).scale(0.1f);
+            Assert.Equal(0.06f, scaled.transformedScore(), 4);
 
             var inverted = new BalloonAppraisal(carp1).inverse();
             Assert.Equal(0.4f, inverted.transformedScore(), 4);

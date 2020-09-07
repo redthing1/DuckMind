@@ -5,8 +5,7 @@ using Xunit;
 namespace Ducia.Perf.Framework {
     public class CakeGamePerf {
         private CakeGame game;
-        // [Params(100, 1000, 10000, 100000)] public int N;
-        [Params(10000)] public int N;
+        [Params(100, 1000, 10000, 100000)] public int N;
         
         [GlobalSetup]
         public void setup() {

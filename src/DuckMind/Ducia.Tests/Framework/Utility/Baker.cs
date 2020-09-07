@@ -21,11 +21,11 @@ namespace Ducia.Tests.Framework.Utility {
 
         private void buildReasoner() {
             reasoner = new Reasoner<CakeGame>();
-            reasoner.scoreType = Reasoner<CakeGame>.ScoreType.Normalized;
+            reasoner.scoreType = Reasoner<CakeGame>.ScoreType.Raw;
 
-            var sleepConsid = new ThresholdSumConsideration<CakeGame>(game.sleepBed, 0.7f, "sleep");
+            var sleepConsid = new ThresholdSumConsideration<CakeGame>(game.sleepBed, 0.6f, "sleep");
             sleepConsid.addAppraisal(new Sleepy(game));
-            sleepConsid.addAppraisal(new Backlogged(game).clamp(0.3f).negate());
+            sleepConsid.addAppraisal(new Backlogged(game).scale(0.3f).negate());
             reasoner.addConsideration(sleepConsid);
 
             var bakeConsid = new SumConsideration<CakeGame>(game.bakeCake, "bake");
