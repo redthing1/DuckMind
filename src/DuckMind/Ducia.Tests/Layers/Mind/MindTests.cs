@@ -60,6 +60,30 @@ namespace Ducia.Tests.Layers.Mind {
             Assert.Equal(10, taxSystem.paid);
         }
 
+        [Fact]
+        public void canCompleteTasks() {
+            // add plan to task
+            mind.state.plan.Enqueue(new BasicMind.PushButtonTask(mind));
+            Assert.True(mind.state.plan.TryPeek(out var task));
+            var btnTask = task as BasicMind.PushButtonTask;
+            Assert.Equal(PlanTask.Status.Ongoing, btnTask.status());
+            btnTask.press();
+            Assert.Equal(PlanTask.Status.Complete, btnTask.status());
+        }
+
+        [Fact]
+        public void tasksCanExpire() {
+            // add plan to task
+            mind.state.plan.Enqueue(new BasicMind.PushButtonTask(mind, 1f));
+            Assert.True(mind.state.plan.TryPeek(out var task));
+            var btnTask = task as BasicMind.PushButtonTask;
+            Assert.Equal(PlanTask.Status.Ongoing, btnTask.status());
+            mind.tick(0.5f);
+            Assert.Equal(PlanTask.Status.Ongoing, btnTask.status());
+            mind.tick(0.5f);
+            Assert.Equal(PlanTask.Status.Failed, btnTask.status());
+        }
+
         public void Dispose() {
             mind.destroy();
         }

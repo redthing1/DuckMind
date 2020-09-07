@@ -1,10 +1,14 @@
 using System;
+using System.Collections.Concurrent;
 using System.Threading;
 using Ducia.Systems;
+using Xunit;
 
 namespace Ducia.Tests.Layers.Mind {
     public class BasicMind : Mind<BasicMind.State> {
-        public class State : MindState { }
+        public class State : MindState {
+            public ConcurrentQueue<PlanTask> plan = new ConcurrentQueue<PlanTask>();
+        }
 
         public BasicMind() : base(new State()) { }
 
@@ -69,6 +73,25 @@ namespace Ducia.Tests.Layers.Mind {
 
             public BillSignal(int price) {
                 this.price = price;
+            }
+        }
+        
+        public class PushButtonTask : PlanTask<BasicMind> {
+            public bool pressed { get; private set; } = false;
+            
+            public PushButtonTask(BasicMind mind, float expiryTime = 0) : base(mind, expiryTime) { }
+ 
+            public override Status status() {
+                if (base.status() == Status.Failed) return Status.Failed; // check base conditions
+
+                if (pressed) return Status.Complete;
+
+                return Status.Ongoing;
+            }
+
+            public void press() {
+                Assert.False(pressed);
+                pressed = true;
             }
         }
     }
