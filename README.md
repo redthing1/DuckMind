@@ -22,11 +22,11 @@ the **Ducia** library provides the core AI algorithms and classes. when using th
 
 ## usage
 
-as a primer, read the [documentation](doc/) for detailed information on Ducia's key concepts.
+read the [documentation](doc/index.md) for detailed information on Ducia's key concepts.
 
 ### simple example: ants
 
-TODO: we will walk through using Ducia to power an ant simulation, with source code
+see the Ants (WIP) example
 
 ### robust example: ducks
 
