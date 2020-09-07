@@ -21,6 +21,8 @@ namespace Ducia {
             /// </summary>
             Failed
         }
+
+        public abstract Status status();
     }
 
     public abstract class PlanTask<TMind> : PlanTask where TMind : IMind {
@@ -36,7 +38,7 @@ namespace Ducia {
         /// whether the goal should still be pursued (valid/ongoing)
         /// </summary>
         /// <returns></returns>
-        public virtual Status status() {
+        public override Status status() {
             if (failureTime <= 0) return Status.Ongoing;
             return mind.elapsed < failureTime ? Status.Ongoing : Status.Failed;
         }
