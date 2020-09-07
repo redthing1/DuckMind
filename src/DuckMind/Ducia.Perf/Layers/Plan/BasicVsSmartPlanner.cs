@@ -11,7 +11,7 @@ namespace Ducia.Perf.Layers.Plan {
         [Params(100, 1000, 10000)] public int N;
 
         [GlobalSetup]
-        public void Setup() {
+        public void setup() {
             basicCleaner = new BasicRoomCleaner();
             smartCleaner = new SmartRoomCleaner();
 
