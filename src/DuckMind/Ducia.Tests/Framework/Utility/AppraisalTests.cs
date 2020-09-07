@@ -4,8 +4,6 @@ using Xunit;
 
 namespace Ducia.Tests.Framework.Utility {
     public class AppraisalTests {
-        private ThresholdSumConsideration<MagicCarpet> floatConsideration;
-
         class MagicCarpet {
             /// <summary>
             /// the maximum amount of force able to be applied by balloons or weights
@@ -68,12 +66,23 @@ namespace Ducia.Tests.Framework.Utility {
         [Fact]
         public void canScoreConsideration() {
             var carpet = new MagicCarpet(2, 2);
-            floatConsideration = new ThresholdSumConsideration<MagicCarpet>(() => { }, 0.5f);
-            floatConsideration.addAppraisal(new BalloonAppraisal(carpet));
-            floatConsideration.addAppraisal(new WeightsAppraisal(carpet).negate());
+            var floatConsid = new ThresholdSumConsideration<MagicCarpet>(() => { }, 0.5f);
+            floatConsid.addAppraisal(new BalloonAppraisal(carpet));
+            floatConsid.addAppraisal(new WeightsAppraisal(carpet).negate());
 
-            var score = floatConsideration.score();
-            Assert.Equal(0f, score);
+            var score = floatConsid.score();
+            Assert.Equal(0f, score, 4);
+        }
+
+        [Fact]
+        public void canScoreConsiderationsWithTransformedAppraisals() {
+            var carpet = new MagicCarpet(4, 8);
+            var floatConsid = new SumConsideration<MagicCarpet>(() => { });
+            floatConsid.addAppraisal(new BalloonAppraisal(carpet));
+            floatConsid.addAppraisal(new WeightsAppraisal(carpet).clamp(0.6f).negate());
+
+            var score = floatConsid.score();
+            Assert.Equal(-0.2f, score, 4);
         }
     }
 }
