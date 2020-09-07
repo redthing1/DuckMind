@@ -1,7 +1,7 @@
 using Nez;
 
 namespace Ducia.Game {
-    public abstract class PlanInteraction<TMind> : PlanTask<TMind> {
+    public abstract class PlanInteraction<TMind> : PlanTask<TMind> where TMind : IMind {
         public Entity[] interactees;
         private bool done = false;
 

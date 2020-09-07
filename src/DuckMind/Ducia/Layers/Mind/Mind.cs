@@ -7,21 +7,15 @@ namespace Ducia {
     /// represents the consciousness of a Wing.
     /// it can fully control the thoughts and actions of a bird.
     /// </summary>
-    public abstract class Mind<TState> where TState : MindState, new() {
+    public abstract class Mind<TState> : IMind where TState : MindState, new() {
         // - options
         public static bool useThreadPool { get; set; } = true;
 
         // - state
         public readonly TState state;
 
-        /// <summary>
-        /// the number of ticks
-        /// </summary>
         public int ticks { get; private set; }
 
-        /// <summary>
-        /// the elapsed time within this mind
-        /// </summary>
         public float elapsed { get; private set; } = 0;
 
         // - systems
