@@ -14,7 +14,7 @@ namespace Ducia.Tests.Layers.Plan {
         public const int PICK_COST = 1;
         public const int DUMP_COST = 6;
 
-        public override Option[] ActionOptions => new Option[] {pickFlower, dumpBucket};
+        protected override Option[] ActionOptions => new Option[] {pickFlower, dumpBucket};
 
         public Cost pickFlower() {
             // precondition
@@ -48,11 +48,8 @@ namespace Ducia.Tests.Layers.Plan {
             return b;
         }
 
-        public override bool Equals(object? obj) {
-            if (obj is FlowerPicker b) {
-                return b.flowersPicked == flowersPicked && b.bucket == bucket;
-            }
-            else return false;
+        public override bool Equals(FlowerPicker b) {
+            return b.flowersPicked == flowersPicked && b.bucket == bucket;
         }
 
         public override int GetHashCode() {
