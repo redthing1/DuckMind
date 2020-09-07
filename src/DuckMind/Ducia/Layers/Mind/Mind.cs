@@ -41,7 +41,7 @@ namespace Ducia {
             cancelToken = new CancellationTokenSource();
         }
 
-        public void initialize() {
+        public virtual void initialize() {
             // start processing tasks
             if (useThreadPool) {
                 consciousnessTask =
@@ -49,7 +49,7 @@ namespace Ducia {
             }
         }
 
-        public void destroy() {
+        public virtual void destroy() {
             // stop processing tasks
             if (consciousnessTask != null) {
                 cancelToken!.Cancel();
