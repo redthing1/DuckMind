@@ -23,6 +23,10 @@ namespace Ducia {
         protected List<IMindSystem> cognitiveSystems = new List<IMindSystem>();
 
         private Task? consciousnessTask;
+
+        /// <summary>
+        /// the cancellation token used for all asynchronous tasks
+        /// </summary>
         protected CancellationTokenSource cancelToken;
 
         /// <summary>
