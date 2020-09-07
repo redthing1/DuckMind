@@ -9,6 +9,8 @@ namespace Ducia.Tests.Layers.Mind {
         public MindTests() {
             mind = new BasicMind();
             mind.initialize();
+            // use single thread for tests
+            BasicMind.useThreadPool = false;
         }
 
         [Fact]
@@ -45,6 +47,17 @@ namespace Ducia.Tests.Layers.Mind {
             Assert.True(rhythmSystem.beats == 1);
             mind.tick(0.5f);
             Assert.True(rhythmSystem.beats == 2);
+        }
+
+        [Fact]
+        public void canPropagateSignals() {
+            var taxSystem = (BasicMind.TaxReturnsSystem) mind.cognitiveSystems.Single(x => x is BasicMind.TaxReturnsSystem);
+            Assert.Equal(0, taxSystem.paid);
+            // send a signal
+            mind.signal(new BasicMind.BillSignal(10));
+            // respond to the signal
+            mind.tick(0.1f);
+            Assert.Equal(10, taxSystem.paid);
         }
 
         public void Dispose() {
