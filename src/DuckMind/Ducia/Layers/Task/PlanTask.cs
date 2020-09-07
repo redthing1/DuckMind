@@ -27,11 +27,11 @@ namespace Ducia {
 
     public abstract class PlanTask<TMind> : PlanTask where TMind : IMind {
         protected readonly TMind mind;
-        public float failureTime = 0f;
+        public float expiryTime;
 
-        public PlanTask(TMind mind, float reachBefore) {
+        public PlanTask(TMind mind, float expiryTime = 0f) {
             this.mind = mind;
-            failureTime = reachBefore;
+            this.expiryTime = expiryTime;
         }
 
         /// <summary>
@@ -39,8 +39,8 @@ namespace Ducia {
         /// </summary>
         /// <returns></returns>
         public override Status status() {
-            if (failureTime <= 0) return Status.Ongoing;
-            return mind.elapsed < failureTime ? Status.Ongoing : Status.Failed;
+            if (expiryTime <= 0) return Status.Ongoing;
+            return mind.elapsed < expiryTime ? Status.Ongoing : Status.Failed;
         }
     }
 }
