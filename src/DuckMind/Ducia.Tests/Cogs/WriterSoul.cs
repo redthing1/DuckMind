@@ -40,8 +40,8 @@ namespace Ducia.Tests.Cogs {
             public float popularity;
 
             public override void calculate(Personality ply) {
-                productivity = VectorTrait.value(vec_productivity, ply);
-                popularity = VectorTrait.value(vec_popularity, ply);
+                productivity = VectorTrait.rawValue(vec_productivity, ply);
+                popularity = VectorTrait.normalizedValue(vec_popularity, ply);
             }
         }
 
