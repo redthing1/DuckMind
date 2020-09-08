@@ -27,15 +27,15 @@ namespace Ducia.Cogs {
         }
 
         /// <summary>
-        /// second-order trait calculation
+        /// second (or higher) order trait calculation
         /// </summary>
         /// <param name="weights"></param>
         /// <param name="traits"></param>
         /// <returns></returns>
         public static float trait2(float[] weights, float[] traits) {
-            var nvec = GMathf.normVec(weights); // normalize weights
-            var nTraits = GMathf.normVec(traits); // normalize trait combination
-            var result = GMathf.dot(nvec, nTraits);
+            var normalizedWeights = GMathf.normVec(weights); // normalize weights
+            var normalizedTraits = GMathf.normVec(traits); // normalize trait combination
+            var result = GMathf.dot(normalizedWeights, normalizedTraits);
             return result;
         }
     }
