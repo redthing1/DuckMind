@@ -36,5 +36,7 @@ namespace Ducia.Calc {
         /// <param name="v"></param>
         /// <returns></returns>
         public static float map11(float v) => GMathf.map(v, 0, 1, -1, 1);
+
+        public static float clamp11(float v) => GMathf.clamp(v, -1, 1);
     }
 }
