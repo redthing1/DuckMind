@@ -22,14 +22,19 @@ namespace Ducia.Calc {
             if (clamp) r = GMathf.clamp(r, min, max);
             return r;
         }
-
+        
         /// <summary>
-        /// rescale from [-1,1] to [0,1]
+        /// normalize personality component from [-1,1] to [0,1]
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        public static float map11to01(float v) {
-            return GMathf.map01(v, -1f, 1f);
-        }
+        public static float map01(float v) => GMathf.map01(v, -1, 1);
+
+        /// <summary>
+        /// inverse normalize from [0,1] to [-1,1]
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        public static float map11(float v) => GMathf.map(v, 0, 1, -1, 1);
     }
 }
