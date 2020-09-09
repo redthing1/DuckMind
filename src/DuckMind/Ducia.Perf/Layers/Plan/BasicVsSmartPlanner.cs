@@ -3,6 +3,7 @@ using BenchmarkDotNet.Attributes;
 using Ducia.Tests.Layers.Plan;
 
 namespace Ducia.Perf.Layers.Plan {
+    [MemoryDiagnoser]
     public class BasicVsSmartPlanner {
         private BasicRoomCleaner basicCleaner;
         private SmartRoomCleaner smartCleaner;
