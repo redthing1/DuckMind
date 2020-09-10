@@ -39,12 +39,20 @@ namespace Ducia.Framework.Utility {
 
         public Dictionary<Consideration<T>, float> execute() {
             var results = new Dictionary<Consideration<T>, float>();
+            execute(results);
+            return results;
+        }
+
+        /// <summary>
+        /// runs the reasoner, and stores the results in the provided dictionary
+        /// </summary>
+        /// <param name="results"></param>
+        public void execute(Dictionary<Consideration<T>, float> results) {
+            results.Clear();
             foreach (var consideration in considerations) {
                 var score = getScore(consideration);
                 results[consideration] = score;
             }
-
-            return results;
         }
 
         public Consideration<T> choose() {

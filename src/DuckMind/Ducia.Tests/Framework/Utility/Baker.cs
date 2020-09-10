@@ -14,6 +14,8 @@ namespace Ducia.Tests.Framework.Utility {
         /// </summary>
         public CakeGame game;
 
+        private readonly Dictionary<Consideration<CakeGame>, float> reasonerResults = new Dictionary<Consideration<CakeGame>, float>();
+
         public Baker(CakeGame game) {
             this.game = game;
             buildReasoner();
@@ -38,9 +40,9 @@ namespace Ducia.Tests.Framework.Utility {
         }
 
         public string act() {
-            var results = think();
+            think();
             // choose the highest ranked option
-            var chosen = reasoner.choose(results);
+            var chosen = reasoner.choose(reasonerResults);
             // execute the action
             chosen.action();
             // return the tag
@@ -48,8 +50,8 @@ namespace Ducia.Tests.Framework.Utility {
         }
 
         public Dictionary<Consideration<CakeGame>, float> think() {
-            var results = reasoner.execute();
-            return results;
+            reasoner.execute(reasonerResults);
+            return reasonerResults;
         }
     }
 }
