@@ -6,7 +6,7 @@ namespace Ducia.Tests.Framework.Utility {
         // - state
         public int cakesBaked = 0;
         public int flour = 0;
-        public float fatigue = 0f;
+        public float fatigue = 0f; // fatigue [0,1]
         public int orders = 0;
 
         // - consts
@@ -29,7 +29,7 @@ namespace Ducia.Tests.Framework.Utility {
                 i < CAKES_PER_SESSION
                 && flour > FLOUR_PER_CAKE // we have flour
                 && orders > 0 // we have an order
-                && fatigue < 1 - ENERGY_PER_CAKE; // we shouldn't collapse while baking
+                && fatigue < (1 - ENERGY_PER_CAKE); // we shouldn't collapse while baking
                 i++) {
                 // bake
                 flour -= FLOUR_PER_CAKE; // used flour
