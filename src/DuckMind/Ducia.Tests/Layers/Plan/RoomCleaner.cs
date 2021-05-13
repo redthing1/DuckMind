@@ -1,6 +1,7 @@
 using Activ.GOAP;
 
 namespace Ducia.Tests.Layers.Plan {
+    // planning model using more verbose, original XGOAP type class
     public class BasicRoomCleaner : ActionPlanningModel<BasicRoomCleaner> {
         // - state
         public int workDone { get; set; } = 0;
@@ -41,6 +42,7 @@ namespace Ducia.Tests.Layers.Plan {
         }
     }
 
+    // planning model using more concise, less boilerplate smart action planning model
     public class SmartRoomCleaner : SmartActionPlanningModel<SmartRoomCleaner> {
         // - state
         public int workDone { get; set; } = 0;
