@@ -3,7 +3,7 @@
 ## LGOAP: Adaptive layered planning for real-time videogames
 https://www.researchgate.net/publication/261452466_LGOAP_Adaptive_layered_planning_for_real-time_videogames
 
-[LGOAP adaptive layered planning for real-time videogames.pdf](https://github.com/xdrie/DuckMind/files/6514039/LGOAP.adaptive.layered.planning.for.real-time.videogames.pdf)
+[LGOAP adaptive layered planning for real-time videogames.pdf](../papers/LGOAP.adaptive.layered.planning.for.real-time.videogames.pdf)
 
 
 > To reduce the complexity of the algorithm we have adopted a hierarchical system similar to [13]. This hierarchical system uses multiple planners nested inside one another. The highest level planners plan actions that span a long time each and which involve large changes in resources. As lower level planners are activated, their plans are created so that they respect the constraints given by the higher layers. The actions of a layer are more concrete, take less time, and generally involve smaller resource exchanges than the actions of the layers in higher levels. Considering three layers, examples of actions for the example seen in Section III could be: (i) complete quest X, acquire sword, fight ogre for the highest layer; (ii) use item X for the middle level layer; and move to X for the lowest level layer. Of course, depending on the problem domain, different layers and actions may need to be deﬁned.
@@ -23,7 +23,7 @@ https://www.researchgate.net/publication/261452466_LGOAP_Adaptive_layered_planni
 ## Utility Models for Goal‐Directed, Decision‐Theoretic Planners
 https://onlinelibrary.wiley.com/doi/abs/10.1111/0824-7935.00068
 
-[Utility Models for Goal‐Directed, Decision‐Theoretic Planners.pdf](https://github.com/xdrie/DuckMind/files/6476474/Utility.Models.for.Goal.Directed.Decision.Theoretic.Planners.pdf)
+[Utility Models for Goal‐Directed, Decision‐Theoretic Planners.pdf](../papers/Utility.Models.for.Goal.Directed.Decision.Theoretic.Planners.pdf)
 
 > In this paper we seek a middle ground between the simple goal model and the arbitrary preference model. We extend the notion of a goal into a preference or utility model that includes concepts like temporal extent, partial satisfaction, and efﬁciency in achievement. At the same time, we retain the explicit structural information in the goal formula. Thus, planning algorithms can still use the preference model to guide the search for optimal plans by evaluating partially constructed ones.
 
@@ -38,7 +38,7 @@ https://onlinelibrary.wiley.com/doi/abs/10.1111/0824-7935.00068
 ## Drive-Based Utility-Maximizing Computer Game Non-Player Characters
 https://arrow.tudublin.ie/sciendoc/176/
 
-[Drive-Based Utility-Maximizing Computer Game Non-Player Character.pdf](https://github.com/xdrie/DuckMind/files/6514009/Drive-Based.Utility-Maximizing.Computer.Game.Non-Player.Character.pdf)
+[Drive-Based Utility-Maximizing Computer Game Non-Player Character.pdf](../papers/Drive-Based.Utility-Maximizing.Computer.Game.Non-Player.Character.pdf)
 
 
 describes in detail the UDGOAP architecture 
@@ -51,7 +51,7 @@ describes in detail the UDGOAP architecture
 ## Feeling the ambiance: using smart ambiance to increase contextual awareness in game agents
 https://dl.acm.org/doi/10.1145/2159365.2159418
 
-[Smart Ambiance to Increase Contextual Awareness in Game Agents.pdf](https://github.com/xdrie/DuckMind/files/6513932/Smart.Ambiance.to.Increase.Contextual.Awareness.in.Game.Agents.pdf)
+[Smart Ambiance to Increase Contextual Awareness in Game Agents.pdf](../papers/Smart.Ambiance.to.Increase.Contextual.Awareness.in.Game.Agents.pdf)
 
 > This paper introduces smart ambiance as an attempt to address the problem of contextually unrealistic behaviour by having the objects in the environment of an agent implicitly aﬀect the actions selected by the agent. We will present the mechanics of smart ambiance and through examples illustrate how it can create more interesting and believable game agent behaviours.
 
