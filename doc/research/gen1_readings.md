@@ -10,7 +10,7 @@ A broad, general overview of a basic utility based ai.
 ## Dual-Utility Reasoning
 http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter03_Dual-Utility_Reasoning.pdf
 
-[](../papers/)
+[GameAIPro2_Chapter03_Dual-Utility_Reasoning.pdf](../papers/GameAIPro2_Chapter03_Dual-Utility_Reasoning.pdf)
 
 > There are two common ways of using utility to make a decision. The first, which we will call absolute utility, simply evaluates each option and takes the one with the highest score. The second, relative utility, selects an option at random, but it uses the score of each option to define the probability that it will be selected. The probability for selecting an option (P O ) is determined by dividing the utility of that option (U O) by the total utility of all options
 
