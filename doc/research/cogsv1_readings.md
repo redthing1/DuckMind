@@ -3,7 +3,7 @@
 ## HEXACO Review of Research and Theory
 https://journals.sagepub.com/doi/10.1177/1088868314523838?icid=int.sj-abstract.similar-articles.2
 
-[HEXACO Review of Research and Theory.pdf]
+[HEXACO Review of Research and Theory.pdf](../papers/HEXACO Review of Research and Theory.pdf)
 
 > The HEXACO model of personality structure consists of six dimensions—Honesty-Humility (H), Emotionality (E), Extraversion (X), Agreeableness (A), Conscientiousness (C), and Openness to Experience (O)
 
@@ -16,8 +16,8 @@ see page 4 for numerical comparison between HEXACO and FFM
 ## Egges: Generic Personality Modeling
 - https://www.semanticscholar.org/paper/A-Model-for-Personality-and-Emotion-Simulation-Egges-Kshirsagar/32c0c297740bb5bbaefb186b3f7525d5bca909bc
 - https://www.researchgate.net/publication/220356976_Generic_personality_and_emotion_simulation_for_conversational_agents
-- [A Model for Personality and Emotion Simulation.pdf]
-- [Generic personality and emotion simulation for conversational agents.pdf]
+- [A Model for Personality and Emotion Simulation.pdf](../papers/A Model for Personality and Emotion Simulation.pdf)
+- [Generic personality and emotion simulation for conversational agents.pdf](../papers/Generic personality and emotion simulation for conversational agents.pdf)
 
 > The effect of personality and emotion on agent behaviour has been researched quite a lot, whether it concerns a general inﬂuence on behaviour [4], or a more traditional planning-based method [5]. Various rule based models [6] and probabilistic models [7] have been reported in the past. How behaviour should be inﬂuenced by personality and emotion depends on the system that is used and it is out of the scope of this paper.
 
@@ -36,7 +36,7 @@ paper presents a generic personality, mood and emotion (PME) model
 ## Three-Dimensional Model for Emotion Based on Fuzzy Theory
 https://www.semanticscholar.org/paper/An-Improved-Three-Dimensional-Model-for-Emotion-on-Zhu-Li/a9a22e7e28371842162cbb1f4b940cc4d2ec1b17
 
-[Three-Dimensional Model for Emotion Based on Fuzzy Theory.pdf]
+[Three-Dimensional Model for Emotion Based on Fuzzy Theory.pdf](../papers/Three-Dimensional Model for Emotion Based on Fuzzy Theory.pdf)
 
 > In the basic emotion model, Ekman’s six basic emotions correspond to facial expressions and emotions, but they do not indicate the relationship between different emotions. However, the three-dimensional state space emotion model takes anger, joy and fear as the axis, which can not only intuitively and quantitatively describe the type of emotion, and also analyze the probability of emotional changes. Thus combined with the expression recognition system applied in the human-computer interaction system, it has the following shortcomings:
 > • The types of emotions considered in some models cannot be obtained only by expression classification recognition.
