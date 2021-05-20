@@ -1,7 +1,8 @@
 # duckmind gen2 readings
 
-https://www.researchgate.net/publication/261452466_LGOAP_Adaptive_layered_planning_for_real-time_videogames
 ## LGOAP: Adaptive layered planning for real-time videogames
+https://www.researchgate.net/publication/261452466_LGOAP_Adaptive_layered_planning_for_real-time_videogames
+
 [LGOAP adaptive layered planning for real-time videogames.pdf](https://github.com/xdrie/DuckMind/files/6514039/LGOAP.adaptive.layered.planning.for.real-time.videogames.pdf)
 
 
@@ -19,8 +20,9 @@ https://www.researchgate.net/publication/261452466_LGOAP_Adaptive_layered_planni
 
 > An additional aspect that could be explored is that of social interactions through cooperative planning between NPCs. By planning to meet or cooperate at given times in the higher level planners, it would be possible to deﬁne simple social behaviours such as dates, or even more complex ones such as team combat. Social interaction may allow agents to communicate and even share plans and other useful information. NPCs would then learn faster through such interactions.
 
-https://onlinelibrary.wiley.com/doi/abs/10.1111/0824-7935.00068
 ## Utility Models for Goal‐Directed, Decision‐Theoretic Planners
+https://onlinelibrary.wiley.com/doi/abs/10.1111/0824-7935.00068
+
 [Utility Models for Goal‐Directed, Decision‐Theoretic Planners.pdf](https://github.com/xdrie/DuckMind/files/6476474/Utility.Models.for.Goal.Directed.Decision.Theoretic.Planners.pdf)
 
 > In this paper we seek a middle ground between the simple goal model and the arbitrary preference model. We extend the notion of a goal into a preference or utility model that includes concepts like temporal extent, partial satisfaction, and efﬁciency in achievement. At the same time, we retain the explicit structural information in the goal formula. Thus, planning algorithms can still use the preference model to guide the search for optimal plans by evaluating partially constructed ones.
@@ -33,10 +35,8 @@ https://onlinelibrary.wiley.com/doi/abs/10.1111/0824-7935.00068
 
 > The notion of partially satisﬁed goals and their role in the decision-making process appears prominently in the literature on fuzzy mathematics and decision analysis. In particular, our notion of a degree of satisfaction function closely resembles a fuzzy-set membership function. The seminal paper in this area is Bellman and Zadeh (1980); also see the papers in Zimmerman, Zadeh, and Gaines (1984), of which the most relevant to this paper is Dubois and Prade (1984), who discuss the role of aggregation operators in the decision-making process. In the language of fuzzy-set theory, a goal may be expressed as a fuzzy set, and a plan’s membership function with respect to that set indicates the extent to which the plan satisﬁes that goal. An aggregation operator combines membership functions for individual goals into an aggregate membership function, which is an indicator of global success; this is called the decision set. A decision maker then selects an alternative that is “strongly” a member of the decision set. Dubois and Prade categorize and analyze various aggregation functions. However, they do not address the computational issues associated with plan evaluation or generation.
 
-
-http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter03_Dual-Utility_Reasoning.pdf
-
 ## Dual-Utility Reasoning
+http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter03_Dual-Utility_Reasoning.pdf
 
 > There are two common ways of using utility to make a decision. The first, which we will call absolute utility, simply evaluates each option and takes the one with the highest score. The second, relative utility, selects an option at random, but it uses the score of each option to define the probability that it will be selected. The probability for selecting an option (P O ) is determined by dividing the utility of that option (U O) by the total utility of all options
 
@@ -50,13 +50,14 @@ on the algorithm:
 
 > Third, find the highest weight from among the options that remain, and eliminate options whose weight is less than some percentage of this. This step is optional, and the percentage that is used should be configurable on a per-decision basis. Conceptually, what we are doing is finding the options that really aren’t all that appropriate (and thus have been given very low weight) and ensuring that the random number generator doesn’t decide to pick them anyway. What remains are plausible (not stupid) options.
 
-http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter09_An_Introduction_to_Utility_Theory.pdf
 ## An Introduction to Utility Theory
+http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter09_An_Introduction_to_Utility_Theory.pdf
 
 A broad, general overview of a basic utility based ai.
 
-https://arrow.tudublin.ie/sciendoc/176/
 ## Drive-Based Utility-Maximizing Computer Game Non-Player Characters
+https://arrow.tudublin.ie/sciendoc/176/
+
 [Drive-Based Utility-Maximizing Computer Game Non-Player Character.pdf](https://github.com/xdrie/DuckMind/files/6514009/Drive-Based.Utility-Maximizing.Computer.Game.Non-Player.Character.pdf)
 
 
@@ -67,8 +68,9 @@ describes in detail the UDGOAP architecture
 ![96-Figure3 5-1](https://user-images.githubusercontent.com/54390138/118928877-ab48b080-b8f8-11eb-951c-fa8bd49296d3.png)
 ![111-Figure3 8-1](https://user-images.githubusercontent.com/54390138/118928882-abe14700-b8f8-11eb-84e7-b73af81b6eba.png)
 
-https://dl.acm.org/doi/10.1145/2159365.2159418
 ## Feeling the ambiance: using smart ambiance to increase contextual awareness in game agents
+https://dl.acm.org/doi/10.1145/2159365.2159418
+
 [Smart Ambiance to Increase Contextual Awareness in Game Agents.pdf](https://github.com/xdrie/DuckMind/files/6513932/Smart.Ambiance.to.Increase.Contextual.Awareness.in.Game.Agents.pdf)
 
 > This paper introduces smart ambiance as an attempt to address the problem of contextually unrealistic behaviour by having the objects in the environment of an agent implicitly aﬀect the actions selected by the agent. We will present the mechanics of smart ambiance and through examples illustrate how it can create more interesting and believable game agent behaviours.
