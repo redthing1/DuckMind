@@ -3,10 +3,14 @@
 ## An Introduction to Utility Theory
 http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter09_An_Introduction_to_Utility_Theory.pdf
 
+[GameAIPro_Chapter09_An_Introduction_to_Utility_Theory.pdf](../papers/GameAIPro_Chapter09_An_Introduction_to_Utility_Theory.pdf)
+
 A broad, general overview of a basic utility based ai.
 
 ## Dual-Utility Reasoning
 http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter03_Dual-Utility_Reasoning.pdf
+
+[](../papers/)
 
 > There are two common ways of using utility to make a decision. The first, which we will call absolute utility, simply evaluates each option and takes the one with the highest score. The second, relative utility, selects an option at random, but it uses the score of each option to define the probability that it will be selected. The probability for selecting an option (P O ) is determined by dividing the utility of that option (U O) by the total utility of all options
 
@@ -22,6 +26,8 @@ on the algorithm:
 
 ## (GOAP) Symbolic Representation of Game World State: Toward Real-Time Planning in Games
 https://www.semanticscholar.org/paper/Symbolic-Representation-of-Game-World-State%3A-Toward-Orkin/3400fe6b3d7055fb4d2d5cb742f70fc8667bbd35
+
+
 [GOAP Symbolic Representation of Game World State.pdf](../papers/GOAP Symbolic Representation of Game World State.pdf)
 
 an overview of GOAP architecture
