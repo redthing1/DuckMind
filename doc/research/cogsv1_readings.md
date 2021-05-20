@@ -31,5 +31,18 @@ paper presents a generic personality, mood and emotion (PME) model
 
 > In the PME model (which includes the mood), the update process slightly changes. When an emotion inﬂuence has to be processed, the update now happens in two steps. The ﬁrst step consists in updating the mood; the second step consists of updating the emotional state. The mood is updated by a function Ψ m (p, ω t , σ t , a) that calculates the mood change, based on the personality, the emotional state history, the mood history and the emotion inﬂuence. The mood is internally updated using a function Ω m (p, ω t , σ t ). Thus the new mood mt+1  can be calculated as follows:
 
-## a
+## Three-Dimensional Model for Emotion Based on Fuzzy Theory
 https://www.semanticscholar.org/paper/An-Improved-Three-Dimensional-Model-for-Emotion-on-Zhu-Li/a9a22e7e28371842162cbb1f4b940cc4d2ec1b17
+
+[Three-Dimensional Model for Emotion Based on Fuzzy Theory.pdf]
+
+> In the basic emotion model, Ekman’s six basic emotions correspond to facial expressions and emotions, but they do not indicate the relationship between different emotions. However, the three-dimensional state space emotion model takes anger, joy and fear as the axis, which can not only intuitively and quantitatively describe the type of emotion, and also analyze the probability of emotional changes. Thus combined with the expression recognition system applied in the human-computer interaction system, it has the following shortcomings:
+> • The types of emotions considered in some models cannot be obtained only by expression classification recognition.
+> • The model does not consider how to extract detailed main emotional information from facial expressions.
+> Combined with the application background of human-computer interaction system, in order to further improve the emotion model, this paper improves the original three-dimensional state space emotion model in the following aspects:
+> • In order to match emotions with facial expressions, six types of emotions are selected as emotion categories. Ekman maps basic emotions to related basic facial expressions and defines six basic emotions including anger, fear, sadness, happiness, surprise, and disgust.
+> • In order to visually express the position and relationship of different emotions, the three-dimensional state space method emotion model is selected as the basic structure model, considering three basic emotions, namely fear, anger, joy, and certain emotions at a certain time. These three basic emotions are added by different weights.
+> • Projecting the six types of emotions in the selected Ekman into the state space emotion model to intuitively and quickly obtaining the positional relationship between the recognized emotion and the expected emotion from the three-dimensional map based on the expression recognition.
+> • According to the actual situation, we can know that each type of emotion has a certain range of variation. Therefore, in order to distinguish the intensity of each type of emotion, combined with the fuzzy theory, each type of emotion is defined to have a certain spherical range, and different areas in the range are expressed. The degree of strong, medium, or weak emotions of a certain kind of emotion is defined by fuzzy rules. The emotional model obtained by combining Ekman’s basic emotion, state space method emotion model and fuzzy theory is shown in Figure 2. The schematic diagram of each type of emotion degree is shown in Figure 3. In Figure 3, r 1 , r 2 , r 3 indicate the sphere radius of different degrees of emotion.
+
+> Let D show the Euclidean distance from the measured emotion to the standard emotion [12], that is, the distance between the projection point corresponding to the tested emotion and the basic standard emotional center, as shown in formula (12):
