@@ -54,3 +54,15 @@ http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter09_An_Introduction_to_Utilit
 ## An Introduction to Utility Theory
 
 A broad, general overview of a basic utility based ai.
+
+https://arrow.tudublin.ie/sciendoc/176/
+## Drive-Based Utility-Maximizing Computer Game Non-Player Characters
+[Drive-Based Utility-Maximizing Computer Game Non-Player Character.pdf](https://github.com/xdrie/DuckMind/files/6514009/Drive-Based.Utility-Maximizing.Computer.Game.Non-Player.Character.pdf)
+
+
+describes in detail the UDGOAP architecture 
+
+![77-Figure3 3-1](https://user-images.githubusercontent.com/54390138/118928871-aab01a00-b8f8-11eb-9bd3-88c8cb11b918.png)
+![78-Figure3 4-1](https://user-images.githubusercontent.com/54390138/118928874-ab48b080-b8f8-11eb-80cd-b8bdb20b93f7.png)
+![96-Figure3 5-1](https://user-images.githubusercontent.com/54390138/118928877-ab48b080-b8f8-11eb-951c-fa8bd49296d3.png)
+![111-Figure3 8-1](https://user-images.githubusercontent.com/54390138/118928882-abe14700-b8f8-11eb-84e7-b73af81b6eba.png)
