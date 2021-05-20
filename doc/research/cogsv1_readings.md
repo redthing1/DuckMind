@@ -3,6 +3,8 @@
 ## HEXACO Review of Research and Theory
 https://journals.sagepub.com/doi/10.1177/1088868314523838?icid=int.sj-abstract.similar-articles.2
 
+[HEXACO Review of Research and Theory.pdf]
+
 > The HEXACO model of personality structure consists of six dimensions—Honesty-Humility (H), Emotionality (E), Extraversion (X), Agreeableness (A), Conscientiousness (C), and Openness to Experience (O)
 
 > The six-factor structure overlaps heavily with the classic Big Five of early English lexical studies. The X, C, and O factors are largely the same as their Big Five counterparts, apart from the deliberate exclusion of intellectual ability from HEXACO O. However, the H, A, and E dimensions do not correspond isomorphically to any of the classic Big Five factors; instead, these three dimensions incorporate the variance associated with Big Five Agreeableness and Neuroticism (versus Emotional Stability) factors as well as additional variance not captured within the classic Big Five. To use Goldberg’s (2001) term, the variance of the Big Five is “reorganized” in the six-factor structure.
