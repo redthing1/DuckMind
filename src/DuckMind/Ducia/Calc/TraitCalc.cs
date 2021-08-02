@@ -1,4 +1,4 @@
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Calc {
     public static class TraitCalc {
@@ -12,7 +12,7 @@ namespace Ducia.Calc {
         /// <param name="clampMax"></param>
         /// <returns></returns>
         public static float transform(float trait, float mapMin, float mapMax, float clampMin, float clampMax) {
-            return GMathf.clampMapped(trait, -1f, 1f, mapMin, mapMax, clampMin, clampMax);
+            return Mathf.clampMapped(trait, -1f, 1f, mapMin, mapMax, clampMin, clampMax);
         }
         
         public static float transform(float trait, float mapMin, float mapMax) {

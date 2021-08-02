@@ -1,5 +1,5 @@
 using Ducia.Calc;
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Cogs {
     public abstract class Personality {
@@ -11,8 +11,8 @@ namespace Ducia.Cogs {
         /// <param name="weights"></param>
         /// <returns></returns>
         public float mult(float[] weights) {
-            var nvec = GMathf.normVec(vec); // normalized personality vector
-            return GMathf.dot(nvec, weights);
+            var nvec = Mathf.normVec(vec); // normalized personality vector
+            return Mathf.dot(nvec, weights);
         }
 
         /// <summary>
@@ -21,11 +21,11 @@ namespace Ducia.Cogs {
         /// <param name="weights"></param>
         /// <returns></returns>
         public float multRaw(float[] weights) {
-            return GMathf.dot(vec, weights);
+            return Mathf.dot(vec, weights);
         }
 
         public static float normalRand(float u, float s) {
-            return GMathf.clamp(Distribution.normalRand(u, s), -1f, 1f);
+            return Mathf.clamp(Distribution.normalRand(u, s), -1f, 1f);
         }
     }
 }

@@ -1,4 +1,4 @@
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Calc {
     /// <summary>
@@ -19,7 +19,7 @@ namespace Ducia.Calc {
             var s1 = v * min;
             var b = max - min;
             var r = s1 + b * d;
-            if (clamp) r = GMathf.clamp(r, min, max);
+            if (clamp) r = Mathf.clamp(r, min, max);
             return r;
         }
         
@@ -28,15 +28,15 @@ namespace Ducia.Calc {
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        public static float map01(float v) => GMathf.map01(v, -1, 1);
+        public static float map01(float v) => Mathf.map01(v, -1, 1);
 
         /// <summary>
         /// inverse normalize from [0,1] to [-1,1]
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        public static float map11(float v) => GMathf.map(v, 0, 1, -1, 1);
+        public static float map11(float v) => Mathf.map(v, 0, 1, -1, 1);
 
-        public static float clamp11(float v) => GMathf.clamp(v, -1, 1);
+        public static float clamp11(float v) => Mathf.clamp(v, -1, 1);
     }
 }

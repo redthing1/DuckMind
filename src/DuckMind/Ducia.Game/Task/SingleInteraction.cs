@@ -1,6 +1,6 @@
 using Nez;
 
-namespace Ducia.Game {
+namespace Ducia.Game.Task {
     public class SingleInteraction<TMind> : PlanInteraction<TMind> where TMind : IMind {
         public Entity target;
 

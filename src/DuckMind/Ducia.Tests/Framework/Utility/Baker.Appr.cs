@@ -1,5 +1,5 @@
 using Ducia.Framework.Utility;
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Tests.Framework.Utility {
     public partial class Baker {
@@ -10,7 +10,7 @@ namespace Ducia.Tests.Framework.Utility {
             public Sleepy(CakeGame context) : base(context) { }
 
             public override float score() {
-                return GMathf.pow(context.fatigue, 0.6f);
+                return Mathf.pow(context.fatigue, 0.6f);
             }
         }
 
@@ -25,7 +25,7 @@ namespace Ducia.Tests.Framework.Utility {
                 var bigBacklog = 4f;
                 var backlogProportion = context.orders / bigBacklog;
                 // clamp
-                return GMathf.clamp01(backlogProportion);
+                return Mathf.clamp01(backlogProportion);
             }
         }
 
@@ -46,7 +46,7 @@ namespace Ducia.Tests.Framework.Utility {
                 // the further we are, the lower the activation 
                 var distProp = 1f / dist;
                 // scale on square root curve
-                return GMathf.pow(distProp, 0.5f);
+                return Mathf.pow(distProp, 0.5f);
             }
         }
     }
