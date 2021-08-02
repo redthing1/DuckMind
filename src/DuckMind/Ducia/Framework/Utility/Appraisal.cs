@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Framework.Utility {
     public abstract class Appraisal<T> {
@@ -43,7 +43,7 @@ namespace Ducia.Framework.Utility {
         }
 
         public Appraisal<T> clamp(float limit) {
-            transforms.Add(v => GMathf.clamp(v, 0, limit));
+            transforms.Add(v => Mathf.clamp(v, 0, limit));
             return this;
         }
 

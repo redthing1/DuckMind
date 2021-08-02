@@ -1,4 +1,4 @@
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Calc {
     public static class LCurves {
@@ -9,8 +9,8 @@ namespace Ducia.Calc {
         /// <param name="e"></param>
         /// <returns></returns>
         public static float symmetricPow(float v, float e) {
-            if (v >= 0) return GMathf.pow(v, e);
-            return -GMathf.abs(GMathf.pow(v, e));
+            if (v >= 0) return Mathf.pow(v, e);
+            return -Mathf.abs(Mathf.pow(v, e));
         }
 
         /// <summary>
@@ -22,9 +22,9 @@ namespace Ducia.Calc {
         public static float ratioAdvantage(float ratio, float tightness) {
             // this assumes that <1 is advantage and >1 is disadvantage
             // adv(x) = f_rdw(log_h(x))
-            var loghx = GMathf.log(ratio, tightness);
+            var loghx = Mathf.log(ratio, tightness);
             // f_rdw(x) = 2* ((1)/(1+ ( 1*e^(1x) )  ))
-            var fdrw = 2 * ((1) / (1 + (1 * GMathf.exp(1 * loghx)))) - 1;
+            var fdrw = 2 * ((1) / (1 + (1 * Mathf.exp(1 * loghx)))) - 1;
 
             return fdrw;
         }
@@ -36,7 +36,7 @@ namespace Ducia.Calc {
         /// <param name="falloff"></param>
         /// <returns></returns>
         public static float diminishingReturns(float x, float baseValue, float falloff) {
-            return baseValue * GMathf.exp(-falloff * x);
+            return baseValue * Mathf.exp(-falloff * x);
         }
     }
 }

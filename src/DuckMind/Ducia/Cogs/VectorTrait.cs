@@ -1,4 +1,4 @@
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Cogs {
     public static class VectorTrait {
@@ -10,7 +10,7 @@ namespace Ducia.Cogs {
         /// <param name="p">personality</param>
         /// <returns></returns>
         public static float normalizedValue(float[] weights, Personality p) {
-            var normalizedWeights = GMathf.normVec(weights); // normalized weight vec
+            var normalizedWeights = Mathf.normVec(weights); // normalized weight vec
             var result = p.mult(normalizedWeights);
             return result;
         }
@@ -33,9 +33,9 @@ namespace Ducia.Cogs {
         /// <param name="traits"></param>
         /// <returns></returns>
         public static float trait2(float[] weights, float[] traits) {
-            var normalizedWeights = GMathf.normVec(weights); // normalize weights
-            var normalizedTraits = GMathf.normVec(traits); // normalize trait combination
-            var result = GMathf.dot(normalizedWeights, normalizedTraits);
+            var normalizedWeights = Mathf.normVec(weights); // normalize weights
+            var normalizedTraits = Mathf.normVec(traits); // normalize trait combination
+            var result = Mathf.dot(normalizedWeights, normalizedTraits);
             return result;
         }
     }

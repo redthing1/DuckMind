@@ -9,16 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Framework" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="C5" Version="3.0.0-beta" />
-        <PackageReference Include="Iri.XGOAP" Version="1.0.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\..\..\..\Glint\src\XNez.GUtils\XNez.GUtils.csproj" />
+        <PackageReference Include="C5" Version="3.0.0-beta"/>
+        <PackageReference Include="Iri.XGOAP" Version="1.0.1"/>
     </ItemGroup>
 
 </Project>

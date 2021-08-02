@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using XNez.GUtils.Misc;
+using Ducia.Primer;
 
 namespace Ducia.Calc {
     public class Distribution {
-        public static float exponentialDf(float x, float m) => (float) GMathf.exp(-x * m);
+        public static float exponentialDf(float x, float m) => (float) Mathf.exp(-x * m);
 
         /// <summary>
         /// selects a random value using a normal distribution
@@ -16,10 +16,10 @@ namespace Ducia.Calc {
             // https://en.wikipedia.org/wiki/Box%E2%80%93Muller_transform
             // https://stackoverflow.com/a/218600
             // i honestly have no idea how this works
-            var u1 = 1.0f - GRand.nextFloat();
-            var u2 = 1.0f - GRand.nextFloat();
-            var dst = GMathf.sqrt(-2f * GMathf.log(u1))
-                                * GMathf.sin(2f * GMathf.PI * u2);
+            var u1 = 1.0f - Rand.nextFloat();
+            var u2 = 1.0f - Rand.nextFloat();
+            var dst = Mathf.sqrt(-2f * Mathf.log(u1))
+                                * Mathf.sin(2f * Mathf.PI * u2);
             var v =
                 u + s * dst;
             return v;

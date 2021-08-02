@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using C5;
-using XNez.GUtils.Types;
+using Ducia.Primer;
 
 namespace Ducia.Framework.Pathfinding {
     public class Pathfinder {
