@@ -9,7 +9,7 @@ namespace Ducia.Framework.DGU {
         public List<Drive> drives;
         public List<Goal> goals;
 
-        #region SENSE THINK ACT
+        #region Sense-Think-Act outline
 
         void sense() {
             perceive();
@@ -31,7 +31,13 @@ namespace Ducia.Framework.DGU {
 
         #endregion
 
+        #region Implement Sense
+
         private void perceive() { }
+
+        #endregion
+
+        #region Implement Think
 
         private void updateFacts() {
             throw new System.NotImplementedException();
@@ -49,6 +55,12 @@ namespace Ducia.Framework.DGU {
             throw new System.NotImplementedException();
         }
 
+        #endregion
+
+        #region Implement Act
+
         private void propagateEffects() { }
+
+        #endregion
     }
 }
