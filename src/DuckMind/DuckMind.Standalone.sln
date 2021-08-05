@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia", "Ducia\Ducia.csproj", "{332D270C-22D2-4B82-A6C8-B190E6B6F88A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindDemos", "MindDemos\MindDemos.csproj", "{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia.Tests", "Ducia.Tests\Ducia.Tests.csproj", "{E2A30787-0AD3-47AF-96BD-64F892B90CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducia.Perf", "Ducia.Perf\Ducia.Perf.csproj", "{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332D270C-22D2-4B82-A6C8-B190E6B6F88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7AD5F5-F4C0-4494-A3E3-3CF5B64FD577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A30787-0AD3-47AF-96BD-64F892B90CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9A0B04-DC48-4506-B7DA-CCCA53A681A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
