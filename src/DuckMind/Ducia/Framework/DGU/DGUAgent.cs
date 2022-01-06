@@ -11,11 +11,11 @@ namespace Ducia.Framework.DGU {
 
         #region Sense-Think-Act outline
 
-        void sense() {
+        public void sense() {
             perceive();
         }
 
-        void think() {
+        public void think() {
             // - update internal state
             updateFacts();
             updateDrives();
@@ -25,7 +25,7 @@ namespace Ducia.Framework.DGU {
             requestPlans();
         }
 
-        void act() {
+        public void act() {
             propagateEffects();
         }
 
