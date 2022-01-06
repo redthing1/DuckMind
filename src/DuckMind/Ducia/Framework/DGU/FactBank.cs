@@ -1,3 +1,3 @@
-namespace Ducia.Framework.DGU {
-    public class FactBank { }
-}
+namespace Ducia.Framework.DGU; 
+
+public class FactBank { }

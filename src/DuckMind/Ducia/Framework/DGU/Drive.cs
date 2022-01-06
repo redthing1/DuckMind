@@ -1,3 +1,3 @@
-namespace Ducia.Framework.DGU {
-    public class Drive { }
-}
+namespace Ducia.Framework.DGU; 
+
+public class Drive { }

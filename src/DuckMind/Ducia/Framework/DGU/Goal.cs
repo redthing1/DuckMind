@@ -1,3 +1,3 @@
-namespace Ducia.Framework.DGU {
-    public class Goal { }
-}
+namespace Ducia.Framework.DGU; 
+
+public class Goal { }

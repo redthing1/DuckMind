@@ -1,3 +1,3 @@
-namespace Ducia.Framework.DGU {
-    public class Sensor { }
-}
+namespace Ducia.Framework.DGU; 
+
+public class Sensor { }

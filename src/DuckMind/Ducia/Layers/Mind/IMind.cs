@@ -1,35 +1,35 @@
-namespace Ducia {
-    public interface IMind {
-        /// <summary>
-        ///     the number of ticks
-        /// </summary>
-        int ticks { get; }
+namespace Ducia; 
 
-        /// <summary>
-        ///     the elapsed time within this mind
-        /// </summary>
-        float elapsed { get; }
+public interface IMind {
+    /// <summary>
+    ///     the number of ticks
+    /// </summary>
+    int ticks { get; }
 
-        /// <summary>
-        ///     allocate resources and start
-        /// </summary>
-        void initialize();
+    /// <summary>
+    ///     the elapsed time within this mind
+    /// </summary>
+    float elapsed { get; }
 
-        /// <summary>
-        ///     deallocate resources and halt
-        /// </summary>
-        void destroy();
+    /// <summary>
+    ///     allocate resources and start
+    /// </summary>
+    void initialize();
 
-        /// <summary>
-        ///     step all the systems (main thread)
-        /// </summary>
-        /// <param name="dt"></param>
-        void tick(float dt);
+    /// <summary>
+    ///     deallocate resources and halt
+    /// </summary>
+    void destroy();
 
-        /// <summary>
-        ///     propagate a signal
-        /// </summary>
-        /// <param name="signal"></param>
-        void signal(MindSignal signal);
-    }
+    /// <summary>
+    ///     step all the systems (main thread)
+    /// </summary>
+    /// <param name="dt"></param>
+    void tick(float dt);
+
+    /// <summary>
+    ///     propagate a signal
+    /// </summary>
+    /// <param name="signal"></param>
+    void signal(MindSignal signal);
 }

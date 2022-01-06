@@ -1,35 +1,35 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ducia.Framework.Utility.Considerations {
-    public abstract class Consideration<T> {
-        public Action action;
-        protected List<Appraisal<T>> appraisals = new List<Appraisal<T>>();
-        public Dictionary<Appraisal<T>, float> lastScores = new Dictionary<Appraisal<T>, float>();
+namespace Ducia.Framework.Utility.Considerations; 
 
-        public Consideration(Action action, string? tag = null) {
-            this.action = action;
-            this.tag = tag;
-        }
+public abstract class Consideration<T> {
+    public Action action;
+    protected List<Appraisal<T>> appraisals = new List<Appraisal<T>>();
+    public Dictionary<Appraisal<T>, float> lastScores = new Dictionary<Appraisal<T>, float>();
 
-        public virtual string? tag { get; }
+    public Consideration(Action action, string? tag = null) {
+        this.action = action;
+        this.tag = tag;
+    }
 
-        public void addAppraisal(Appraisal<T> appraisal) {
-            appraisals.Add(appraisal);
-        }
+    public virtual string? tag { get; }
 
-        protected float scoreAppraisal(Appraisal<T> appraisal) {
-            var score = appraisal.transformedScore();
+    public void addAppraisal(Appraisal<T> appraisal) {
+        appraisals.Add(appraisal);
+    }
 
-            if (Reasoner<T>.trace) lastScores[appraisal] = score; // log last score
+    protected float scoreAppraisal(Appraisal<T> appraisal) {
+        var score = appraisal.transformedScore();
 
-            return score;
-        }
+        if (Reasoner<T>.trace) lastScores[appraisal] = score; // log last score
 
-        public abstract float score();
+        return score;
+    }
 
-        public float normalizedScore() {
-            return score() / appraisals.Count;
-        }
+    public abstract float score();
+
+    public float normalizedScore() {
+        return score() / appraisals.Count;
     }
 }

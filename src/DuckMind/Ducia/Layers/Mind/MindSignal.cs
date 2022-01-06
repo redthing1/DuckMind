@@ -1,3 +1,3 @@
-namespace Ducia {
-    public abstract class MindSignal { }
-}
+namespace Ducia; 
+
+public abstract class MindSignal { }

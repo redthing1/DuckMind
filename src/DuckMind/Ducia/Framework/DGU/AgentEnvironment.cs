@@ -1,3 +1,3 @@
-namespace Ducia.Framework.DGU {
-    public class AgentEnvironment { }
-}
+namespace Ducia.Framework.DGU; 
+
+public class AgentEnvironment { }

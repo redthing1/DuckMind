@@ -1,67 +1,67 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ducia.Framework.DGU {
-    public class DGUAgent {
-        public List<Drive> drives;
-        public AgentEnvironment environment;
-        public FactBank factMemory;
-        public List<Goal> goals;
-        public DGUPlanner planner;
-        public List<Sensor> sensors;
+namespace Ducia.Framework.DGU;
 
-        #region Implement Sense
+public class DGUAgent {
+    public List<Drive> drives;
+    public AgentEnvironment environment;
+    public FactBank factMemory;
+    public List<Goal> goals;
+    public DGUPlanner planner;
+    public List<Sensor> sensors;
 
-        private void perceive() { }
+    #region Implement Sense
 
-        #endregion
+    private void perceive() { }
 
-        #region Implement Act
+    #endregion
 
-        private void propagateEffects() { }
+    #region Implement Act
 
-        #endregion
+    private void propagateEffects() { }
 
-        #region Sense-Think-Act outline
+    #endregion
 
-        public void sense() {
-            perceive();
-        }
+    #region Sense-Think-Act outline
 
-        public void think() {
-            // - update internal state
-            updateFacts();
-            updateDrives();
-            updateGoals();
-
-            // - ask the planning algorithm
-            requestPlans();
-        }
-
-        public void act() {
-            propagateEffects();
-        }
-
-        #endregion
-
-        #region Implement Think
-
-        private void updateFacts() {
-            throw new NotImplementedException();
-        }
-
-        private void updateDrives() {
-            throw new NotImplementedException();
-        }
-
-        private void updateGoals() {
-            throw new NotImplementedException();
-        }
-
-        private void requestPlans() {
-            throw new NotImplementedException();
-        }
-
-        #endregion
+    public void sense() {
+        perceive();
     }
+
+    public void think() {
+        // - update internal state
+        updateFacts();
+        updateDrives();
+        updateGoals();
+
+        // - ask the planning algorithm
+        requestPlans();
+    }
+
+    public void act() {
+        propagateEffects();
+    }
+
+    #endregion
+
+    #region Implement Think
+
+    private void updateFacts() {
+        throw new NotImplementedException();
+    }
+
+    private void updateDrives() {
+        throw new NotImplementedException();
+    }
+
+    private void updateGoals() {
+        throw new NotImplementedException();
+    }
+
+    private void requestPlans() {
+        throw new NotImplementedException();
+    }
+
+    #endregion
 }

@@ -1,3 +1,3 @@
-namespace Ducia.Framework.DGU {
-    public class DGUPlanner { }
-}
+namespace Ducia.Framework.DGU; 
+
+public class DGUPlanner { }
