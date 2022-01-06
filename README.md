@@ -20,7 +20,7 @@ the **Ducia** library provides the core AI algorithms and classes. when using th
 + **Cogs** - The [**Personality Engine**](https://blog.rie.icu/post/duck_intelligence_presentation/#headline-15) classes
 + **Layers** - abstract framework for combining multiple **Systems** in a [sense-think-act](https://blog.rie.icu/post/duck_intelligence_presentation/#headline-10) architecture
 
-## usage
+## concepts
 
 read the [documentation](doc/index.md) for detailed information on Ducia's key concepts.
 
@@ -33,3 +33,7 @@ see the Ants (WIP) example
 the [Sor](https://github.com/xdrie/Sor/) game makes extensive use of this AI engine, which powers the multi-agent real-time simulation of a bird ecosystem.
 
 in particular, see the [AI sources](https://github.com/xdrie/Sor/tree/main/src/Sor/Sor/AI).
+
+## build
+
+use the `Ducia.sln` for the version including the XNez library, or `Ducia.Standalone.sln` for a standalone version.
