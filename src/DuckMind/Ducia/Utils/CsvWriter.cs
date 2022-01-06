@@ -5,7 +5,7 @@ using System.Text;
 namespace Ducia.Utils {
     public class CsvWriter {
         private Stream outStream;
-        private StreamWriter sw;
+        private readonly StreamWriter sw;
 
         public CsvWriter(Stream outStream) {
             this.outStream = outStream;
@@ -18,17 +18,17 @@ namespace Ducia.Utils {
                 sb.Append(columns[i]);
                 sb.Append(",");
             }
+
             sw.WriteLine(sb.ToString());
             sw.Flush();
         }
 
         public void data(IEnumerable<string[]> data) {
             foreach (var row in data) {
-                foreach (var point in row) {
-                    sw.Write(point + ",");
-                }
+                foreach (var point in row) sw.Write(point + ",");
                 sw.WriteLine();
             }
+
             sw.Flush();
         }
     }

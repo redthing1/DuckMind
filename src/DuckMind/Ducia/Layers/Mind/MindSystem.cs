@@ -6,28 +6,26 @@ namespace Ducia {
     }
 
     /// <summary>
-    /// Represents a system of a mind with a refresh rate
+    ///     Represents a system of a mind with a refresh rate
     /// </summary>
     public abstract class MindSystem<TMind, TState> : IMindSystem
         where TMind : Mind<TState>
         where TState : MindState, new() {
-        public TMind mind;
-        protected TState state;
-        public float refresh;
-        public float nextRefreshAt;
         protected CancellationToken cancelToken;
+        public TMind mind;
+        public float nextRefreshAt;
+        public float refresh;
+        protected TState state;
 
         public MindSystem(TMind mind, float refresh, CancellationToken cancelToken) {
             this.mind = mind;
-            this.state = mind.state;
+            state = mind.state;
             this.refresh = refresh;
             this.cancelToken = cancelToken;
         }
 
-        protected abstract void process();
-
         /// <summary>
-        /// Ticks the mind, calling process if it is time.
+        ///     Ticks the mind, calling process if it is time.
         /// </summary>
         /// <returns>Whether process was called.</returns>
         public virtual bool tick() {
@@ -39,5 +37,7 @@ namespace Ducia {
 
             return false;
         }
+
+        protected abstract void process();
     }
 }

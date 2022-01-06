@@ -2,22 +2,22 @@ namespace Ducia {
     public abstract class PlanTask {
         public enum Status {
             /// <summary>
-            /// task is still running
+            ///     task is still running
             /// </summary>
             Ongoing,
 
             /// <summary>
-            /// task completed successfully
+            ///     task completed successfully
             /// </summary>
             Complete,
 
             /// <summary>
-            /// task failed, but is optional
+            ///     task failed, but is optional
             /// </summary>
             OptionalFailed,
 
             /// <summary>
-            /// task failed unrecoverably
+            ///     task failed unrecoverably
             /// </summary>
             Failed
         }
@@ -35,7 +35,7 @@ namespace Ducia {
         }
 
         /// <summary>
-        /// whether the goal should still be pursued (valid/ongoing)
+        ///     whether the goal should still be pursued (valid/ongoing)
         /// </summary>
         /// <returns></returns>
         public override Status status() {

@@ -6,8 +6,8 @@ namespace Ducia.Primer {
         public readonly float Y;
 
         public PointF(float x, float y) {
-            this.X = x;
-            this.Y = y;
+            X = x;
+            Y = y;
         }
 
         public static PointF operator +(PointF p1, PointF p2) {
@@ -22,7 +22,7 @@ namespace Ducia.Primer {
             if (obj == null || GetType() != obj.GetType())
                 return false;
 
-            return equalTo((PointF) obj);
+            return equalTo((PointF)obj);
         }
 
         public Point round() {
@@ -34,7 +34,7 @@ namespace Ducia.Primer {
         }
 
         public static float dist(PointF p1, PointF p2) {
-            return (float) Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
+            return (float)Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
 
         public override int GetHashCode() {
@@ -47,8 +47,12 @@ namespace Ducia.Primer {
             }
         }
 
-        public bool equalTo(PointF p) => (Math.Abs(X - p.X) < float.Epsilon) && (Math.Abs(Y - p.Y) < float.Epsilon);
+        public bool equalTo(PointF p) {
+            return Math.Abs(X - p.X) < float.Epsilon && Math.Abs(Y - p.Y) < float.Epsilon;
+        }
 
-        public override string ToString() => $"({X}, {Y})";
+        public override string ToString() {
+            return $"({X}, {Y})";
+        }
     }
 }

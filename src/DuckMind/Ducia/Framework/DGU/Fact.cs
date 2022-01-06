@@ -1,5 +1,3 @@
 namespace Ducia.Framework.DGU {
-    public class Fact {
-        
-    }
+    public class Fact { }
 }

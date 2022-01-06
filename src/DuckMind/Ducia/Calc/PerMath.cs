@@ -2,7 +2,7 @@ using Ducia.Primer;
 
 namespace Ducia.Calc {
     /// <summary>
-    /// Personality math utilities
+    ///     Personality math utilities
     /// </summary>
     public static class PerMath {
         /// <summary>
@@ -22,21 +22,27 @@ namespace Ducia.Calc {
             if (clamp) r = Mathf.clamp(r, min, max);
             return r;
         }
-        
+
         /// <summary>
-        /// normalize personality component from [-1,1] to [0,1]
+        ///     normalize personality component from [-1,1] to [0,1]
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        public static float map01(float v) => Mathf.map01(v, -1, 1);
+        public static float map01(float v) {
+            return Mathf.map01(v, -1, 1);
+        }
 
         /// <summary>
-        /// inverse normalize from [0,1] to [-1,1]
+        ///     inverse normalize from [0,1] to [-1,1]
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        public static float map11(float v) => Mathf.map(v, 0, 1, -1, 1);
+        public static float map11(float v) {
+            return Mathf.map(v, 0, 1, -1, 1);
+        }
 
-        public static float clamp11(float v) => Mathf.clamp(v, -1, 1);
+        public static float clamp11(float v) {
+            return Mathf.clamp(v, -1, 1);
+        }
     }
 }

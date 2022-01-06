@@ -4,7 +4,7 @@ using System.Linq;
 namespace Ducia.Calc {
     public class DiscreteProbabilityDistribution<T> {
         private readonly Rng rng;
-        private List<(float, T)> probabilities;
+        private readonly List<(float, T)> probabilities;
 
         public DiscreteProbabilityDistribution(Rng rng) {
             this.rng = rng;
@@ -24,9 +24,7 @@ namespace Ducia.Calc {
             var r = rng.nextFloat();
             var sum = 0f;
             foreach (var (prob, outcome) in probabilities) {
-                if (r >= sum && r < sum + prob) {
-                    return outcome;
-                }
+                if (r >= sum && r < sum + prob) return outcome;
 
                 sum += prob;
             }

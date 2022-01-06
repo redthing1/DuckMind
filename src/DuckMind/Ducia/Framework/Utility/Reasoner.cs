@@ -4,25 +4,27 @@ using Ducia.Framework.Utility.Considerations;
 
 namespace Ducia.Framework.Utility {
     public class Reasoner<T> {
-        protected List<Consideration<T>> considerations = new List<Consideration<T>>();
-        private static readonly Random random = new Random();
-        public ScoreType scoreType = ScoreType.Raw;
-        
-        /// <summary>
-        /// whether to enable internal tracing
-        /// </summary>
-        public static bool trace = false;
-
         public enum ScoreType {
             /// <summary>
-            /// use raw sum of appraisals as the score
+            ///     use raw sum of appraisals as the score
             /// </summary>
             Raw,
+
             /// <summary>
-            /// normalize the sum of the appraisals to the interval [0, 1]
+            ///     normalize the sum of the appraisals to the interval [0, 1]
             /// </summary>
             Normalized
         }
+
+        private static readonly Random random = new Random();
+
+        /// <summary>
+        ///     whether to enable internal tracing
+        /// </summary>
+        public static bool trace = false;
+
+        protected List<Consideration<T>> considerations = new List<Consideration<T>>();
+        public ScoreType scoreType = ScoreType.Raw;
 
         public void addConsideration(Consideration<T> consideration) {
             considerations.Add(consideration);
@@ -44,7 +46,7 @@ namespace Ducia.Framework.Utility {
         }
 
         /// <summary>
-        /// runs the reasoner, and stores the results in the provided dictionary
+        ///     runs the reasoner, and stores the results in the provided dictionary
         /// </summary>
         /// <param name="results"></param>
         public void execute(Dictionary<Consideration<T>, float> results) {
@@ -62,11 +64,9 @@ namespace Ducia.Framework.Utility {
 
         public Consideration<T> choose(Dictionary<Consideration<T>, float> results) {
             var max = default(KeyValuePair<Consideration<T>, float>);
-            foreach (var result in results) {
-                if (max.Key == null || result.Value > max.Value) {
+            foreach (var result in results)
+                if (max.Key == null || result.Value > max.Value)
                     max = result;
-                }
-            }
 
             return max.Key;
         }

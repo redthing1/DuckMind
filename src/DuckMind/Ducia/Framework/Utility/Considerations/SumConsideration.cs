@@ -2,7 +2,7 @@ using System;
 
 namespace Ducia.Framework.Utility.Considerations {
     /// <summary>
-    /// Adds all appraisals
+    ///     Adds all appraisals
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class SumConsideration<T> : Consideration<T> {
@@ -10,9 +10,7 @@ namespace Ducia.Framework.Utility.Considerations {
 
         public override float score() {
             var sum = 0f;
-            foreach (var appraisal in appraisals) {
-                sum += scoreAppraisal(appraisal);
-            }
+            foreach (var appraisal in appraisals) sum += scoreAppraisal(appraisal);
 
             return sum;
         }

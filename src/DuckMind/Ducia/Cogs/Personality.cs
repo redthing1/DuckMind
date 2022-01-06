@@ -6,7 +6,7 @@ namespace Ducia.Cogs {
         public abstract float[] vec { get; }
 
         /// <summary>
-        /// dot product of normalized vec and weights
+        ///     dot product of normalized vec and weights
         /// </summary>
         /// <param name="weights"></param>
         /// <returns></returns>
@@ -16,7 +16,7 @@ namespace Ducia.Cogs {
         }
 
         /// <summary>
-        /// dot product of raw vec and weights, without normalization
+        ///     dot product of raw vec and weights, without normalization
         /// </summary>
         /// <param name="weights"></param>
         /// <returns></returns>

@@ -6,12 +6,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Ducia.Tests\Ducia.Tests.csproj" />
-      <ProjectReference Include="..\Ducia\Ducia.csproj" />
+        <ProjectReference Include="..\Ducia.Tests\Ducia.Tests.csproj"/>
+        <ProjectReference Include="..\Ducia\Ducia.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Iri.Glass" Version="0.3.1" />
+        <PackageReference Include="Iri.Glass" Version="0.3.1"/>
     </ItemGroup>
 
 </Project>

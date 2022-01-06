@@ -3,8 +3,8 @@ using Ducia.Primer;
 namespace Ducia.Cogs {
     public static class VectorTrait {
         /// <summary>
-        /// calculate the value of a trait for a personality
-        /// normalizes both the weight vector and the personality vector
+        ///     calculate the value of a trait for a personality
+        ///     normalizes both the weight vector and the personality vector
         /// </summary>
         /// <param name="weights">trait weights</param>
         /// <param name="p">personality</param>
@@ -16,8 +16,8 @@ namespace Ducia.Cogs {
         }
 
         /// <summary>
-        /// computes the raw dot product of the weight vector and the personality vector
-        /// without normalization
+        ///     computes the raw dot product of the weight vector and the personality vector
+        ///     without normalization
         /// </summary>
         /// <param name="weights"></param>
         /// <param name="p"></param>
@@ -27,7 +27,7 @@ namespace Ducia.Cogs {
         }
 
         /// <summary>
-        /// second (or higher) order trait calculation
+        ///     second (or higher) order trait calculation
         /// </summary>
         /// <param name="weights"></param>
         /// <param name="traits"></param>

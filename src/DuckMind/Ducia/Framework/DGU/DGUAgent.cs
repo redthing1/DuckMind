@@ -1,13 +1,26 @@
+using System;
 using System.Collections.Generic;
 
 namespace Ducia.Framework.DGU {
     public class DGUAgent {
-        public AgentEnvironment environment;
-        public DGUPlanner planner;
-        public FactBank factMemory;
-        public List<Sensor> sensors;
         public List<Drive> drives;
+        public AgentEnvironment environment;
+        public FactBank factMemory;
         public List<Goal> goals;
+        public DGUPlanner planner;
+        public List<Sensor> sensors;
+
+        #region Implement Sense
+
+        private void perceive() { }
+
+        #endregion
+
+        #region Implement Act
+
+        private void propagateEffects() { }
+
+        #endregion
 
         #region Sense-Think-Act outline
 
@@ -31,35 +44,23 @@ namespace Ducia.Framework.DGU {
 
         #endregion
 
-        #region Implement Sense
-
-        private void perceive() { }
-
-        #endregion
-
         #region Implement Think
 
         private void updateFacts() {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         private void updateDrives() {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         private void updateGoals() {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         private void requestPlans() {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
-
-        #endregion
-
-        #region Implement Act
-
-        private void propagateEffects() { }
 
         #endregion
     }

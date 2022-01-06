@@ -3,7 +3,7 @@ using Ducia.Primer;
 namespace Ducia.Calc {
     public static class LCurves {
         /// <summary>
-        /// x^n function, but absolute value on negative x
+        ///     x^n function, but absolute value on negative x
         /// </summary>
         /// <param name="v"></param>
         /// <param name="e"></param>
@@ -14,7 +14,7 @@ namespace Ducia.Calc {
         }
 
         /// <summary>
-        /// the advantage [-1,1] given a ratio [0, inf), where <1 is advantage
+        ///     the advantage [-1,1] given a ratio [0, inf), where <1 is advantage
         /// </summary>
         /// <param name="ratio"></param>
         /// <param name="tightness"></param>
@@ -24,13 +24,13 @@ namespace Ducia.Calc {
             // adv(x) = f_rdw(log_h(x))
             var loghx = Mathf.log(ratio, tightness);
             // f_rdw(x) = 2* ((1)/(1+ ( 1*e^(1x) )  ))
-            var fdrw = 2 * ((1) / (1 + (1 * Mathf.exp(1 * loghx)))) - 1;
+            var fdrw = 2 * (1 / (1 + 1 * Mathf.exp(1 * loghx))) - 1;
 
             return fdrw;
         }
 
         /// <summary>
-        /// models a diminishing return function f(x)=A*e^(-rx), outputs [0,1] given an input value x 
+        ///     models a diminishing return function f(x)=A*e^(-rx), outputs [0,1] given an input value x
         /// </summary>
         /// <param name="baseValue"></param>
         /// <param name="falloff"></param>

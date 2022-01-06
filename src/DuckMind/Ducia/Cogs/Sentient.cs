@@ -3,9 +3,9 @@ namespace Ducia.Cogs {
         where TPersonality : Personality, new()
         where TTraits : Traits<TPersonality>, new()
         where TEmotions : Emotions, new() {
+        public TEmotions emotions;
         public TPersonality ply;
         public TTraits traits;
-        public TEmotions emotions;
 
         // public bool calculated => ply != null;
 
@@ -16,7 +16,7 @@ namespace Ducia.Cogs {
         }
 
         /// <summary>
-        /// recalculate (and reset) values using updated personality
+        ///     recalculate (and reset) values using updated personality
         /// </summary>
         public void recalculate() {
             traits.calculate(ply);

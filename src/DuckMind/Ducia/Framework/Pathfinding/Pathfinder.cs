@@ -5,30 +5,13 @@ using Ducia.Primer;
 
 namespace Ducia.Framework.Pathfinding {
     public class Pathfinder {
-        private class Node : IComparable<Node> {
-            public bool open = true;
-            public Node parent;
-            public int X, Y;
-            public int g, h;
+        private readonly Node[,] _nodeGrid;
+        private readonly IntervalHeap<Node> _openList = new IntervalHeap<Node>();
 
-            public int f {
-                get { return g + h; }
-            }
-
-            public IPriorityQueueHandle<Node>? pqHandle;
-
-            public Node(int x, int y, int g, int h, Node parent) {
-                this.X = x;
-                this.Y = y;
-                this.g = g;
-                this.h = h;
-                this.parent = parent;
-            }
-
-            public int CompareTo(Node other) {
-                return f - other.f;
-            }
-        }
+        private readonly Predicate<Point> _passable;
+        private readonly Point _size;
+        private readonly Point _start;
+        private readonly Point _goal;
 
         public Pathfinder(Point size, Point start, Point goal, Predicate<Point> passable) {
             _size = size;
@@ -88,8 +71,7 @@ namespace Ducia.Framework.Pathfinding {
                         Point.mhDist(_goal, new Point(x, y)), parent);
                     _openList.Add(ref node.pqHandle, node);
                 }
-            }
-            else if (node.open) {
+            } else if (node.open) {
                 if (g < node.g) {
                     // this route is better
                     node.g = g;
@@ -99,10 +81,29 @@ namespace Ducia.Framework.Pathfinding {
             }
         }
 
-        private Predicate<Point> _passable;
-        private Point _start, _goal;
-        private Node[,] _nodeGrid;
-        private IntervalHeap<Node> _openList = new IntervalHeap<Node>();
-        private Point _size;
+        private class Node : IComparable<Node> {
+            public int g;
+            public readonly int h;
+            public bool open = true;
+            public Node parent;
+
+            public IPriorityQueueHandle<Node>? pqHandle;
+            public readonly int X;
+            public readonly int Y;
+
+            public Node(int x, int y, int g, int h, Node parent) {
+                X = x;
+                Y = y;
+                this.g = g;
+                this.h = h;
+                this.parent = parent;
+            }
+
+            public int f => g + h;
+
+            public int CompareTo(Node other) {
+                return f - other.f;
+            }
+        }
     }
 }

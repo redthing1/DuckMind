@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Ducia.Primer;
 
 namespace Ducia.Framework.Utility {
@@ -8,9 +7,9 @@ namespace Ducia.Framework.Utility {
         protected T context;
 
         /// <summary>
-        /// a utility to attach a "postprocess/transform" function to the score
+        ///     a utility to attach a "postprocess/transform" function to the score
         /// </summary>
-        private List<Func<float, float>> transforms = new List<Func<float, float>>();
+        private readonly List<Func<float, float>> transforms = new List<Func<float, float>>();
 
         public Appraisal(T context) {
             this.context = context;
@@ -22,9 +21,7 @@ namespace Ducia.Framework.Utility {
             var val = score();
             if (transforms.Count > 0) {
                 var v = val;
-                for (var i = 0; i < transforms.Count; i++) {
-                    v = transforms[i].Invoke(v);
-                }
+                for (var i = 0; i < transforms.Count; i++) v = transforms[i].Invoke(v);
 
                 val = v;
             }
@@ -38,7 +35,7 @@ namespace Ducia.Framework.Utility {
         }
 
         public Appraisal<T> inverse() {
-            transforms.Add(v => (1f - v));
+            transforms.Add(v => 1f - v);
             return this;
         }
 

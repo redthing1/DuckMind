@@ -2,56 +2,56 @@ using System.Collections.Generic;
 using Ducia.Framework.Utility;
 using Ducia.Framework.Utility.Considerations;
 
-namespace Ducia.Tests.Framework.Utility {
-    public partial class Baker {
-        /// <summary>
-        /// the utility reasoner
-        /// </summary>
-        public Reasoner<CakeGame> reasoner;
+namespace Ducia.Tests.Framework.Utility; 
 
-        /// <summary>
-        /// the game state
-        /// </summary>
-        public CakeGame game;
+public partial class Baker {
+    private readonly Dictionary<Consideration<CakeGame>, float> reasonerResults = new();
 
-        private readonly Dictionary<Consideration<CakeGame>, float> reasonerResults = new Dictionary<Consideration<CakeGame>, float>();
+    /// <summary>
+    ///     the game state
+    /// </summary>
+    public CakeGame game;
 
-        public Baker(CakeGame game) {
-            this.game = game;
-            buildReasoner();
-        }
+    /// <summary>
+    ///     the utility reasoner
+    /// </summary>
+    public Reasoner<CakeGame> reasoner;
 
-        private void buildReasoner() {
-            reasoner = new Reasoner<CakeGame>();
-            reasoner.scoreType = Reasoner<CakeGame>.ScoreType.Raw;
+    public Baker(CakeGame game) {
+        this.game = game;
+        buildReasoner();
+    }
 
-            var sleepConsid = new ThresholdSumConsideration<CakeGame>(game.sleepBed, 0.6f, "sleep");
-            sleepConsid.addAppraisal(new Sleepy(game));
-            sleepConsid.addAppraisal(new Backlogged(game).scale(0.3f).negate());
-            reasoner.addConsideration(sleepConsid);
+    private void buildReasoner() {
+        reasoner = new Reasoner<CakeGame>();
+        reasoner.scoreType = Reasoner<CakeGame>.ScoreType.Raw;
 
-            var bakeConsid = new SumConsideration<CakeGame>(game.bakeCake, "bake");
-            bakeConsid.addAppraisal(new Backlogged(game));
-            reasoner.addConsideration(bakeConsid);
+        var sleepConsid = new ThresholdSumConsideration<CakeGame>(game.sleepBed, 0.6f, "sleep");
+        sleepConsid.addAppraisal(new Sleepy(game));
+        sleepConsid.addAppraisal(new Backlogged(game).scale(0.3f).negate());
+        reasoner.addConsideration(sleepConsid);
 
-            var shopConsid = new SumConsideration<CakeGame>(game.buyFlour, "shop");
-            shopConsid.addAppraisal(new LowFlour(game));
-            reasoner.addConsideration(shopConsid);
-        }
+        var bakeConsid = new SumConsideration<CakeGame>(game.bakeCake, "bake");
+        bakeConsid.addAppraisal(new Backlogged(game));
+        reasoner.addConsideration(bakeConsid);
 
-        public string act() {
-            think();
-            // choose the highest ranked option
-            var chosen = reasoner.choose(reasonerResults);
-            // execute the action
-            chosen.action();
-            // return the tag
-            return chosen.tag;
-        }
+        var shopConsid = new SumConsideration<CakeGame>(game.buyFlour, "shop");
+        shopConsid.addAppraisal(new LowFlour(game));
+        reasoner.addConsideration(shopConsid);
+    }
 
-        public Dictionary<Consideration<CakeGame>, float> think() {
-            reasoner.execute(reasonerResults);
-            return reasonerResults;
-        }
+    public string act() {
+        think();
+        // choose the highest ranked option
+        var chosen = reasoner.choose(reasonerResults);
+        // execute the action
+        chosen.action();
+        // return the tag
+        return chosen.tag;
+    }
+
+    public Dictionary<Consideration<CakeGame>, float> think() {
+        reasoner.execute(reasonerResults);
+        return reasonerResults;
     }
 }

@@ -2,11 +2,11 @@ using System;
 
 namespace Ducia.Framework.Utility.Considerations {
     /// <summary>
-    /// Adds all appraisals. Each must score above the threshold
+    ///     Adds all appraisals. Each must score above the threshold
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class ThresholdConsideration<T> : Consideration<T> {
-        private float threshold;
+        private readonly float threshold;
 
         public ThresholdConsideration(Action action, float threshold, string? tag = null) : base(action, tag) {
             this.threshold = threshold;

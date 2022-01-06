@@ -8,8 +8,8 @@ namespace Ducia.Primer {
         public Point(int v) : this(v, v) { }
 
         public Point(int x, int y) {
-            this.X = x;
-            this.Y = y;
+            X = x;
+            Y = y;
         }
 
         public static Point operator +(Point p1, Point p2) {
@@ -21,7 +21,7 @@ namespace Ducia.Primer {
         }
 
         /// <summary>
-        /// Manhattan distance
+        ///     Manhattan distance
         /// </summary>
         /// <param name="p1"></param>
         /// <param name="p2"></param>
@@ -31,7 +31,7 @@ namespace Ducia.Primer {
         }
 
         /// <summary>
-        /// Chebyshev distance
+        ///     Chebyshev distance
         /// </summary>
         /// <param name="p1"></param>
         /// <param name="p2"></param>
@@ -44,7 +44,7 @@ namespace Ducia.Primer {
             if (obj == null || GetType() != obj.GetType())
                 return false;
 
-            return equalTo((Point) obj);
+            return equalTo((Point)obj);
         }
 
         public override int GetHashCode() {
@@ -65,8 +65,12 @@ namespace Ducia.Primer {
             return !lhs.Equals(rhs);
         }
 
-        private bool equalTo(Point p) => (X == p.X) && (Y == p.Y);
+        private bool equalTo(Point p) {
+            return X == p.X && Y == p.Y;
+        }
 
-        public override string ToString() => $"({X}, {Y})";
+        public override string ToString() {
+            return $"({X}, {Y})";
+        }
     }
 }

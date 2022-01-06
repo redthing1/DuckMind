@@ -1,5 +1,3 @@
 namespace Ducia.Framework.DGU {
-    public class Sensor {
-        
-    }
+    public class Sensor { }
 }

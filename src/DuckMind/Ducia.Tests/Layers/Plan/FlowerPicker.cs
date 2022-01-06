@@ -1,42 +1,43 @@
 using Activ.GOAP;
 
-namespace Ducia.Tests.Layers.Plan {
-    /// <summary>
-    /// picking flowers
-    /// </summary>
-    public class FlowerPicker : SmartActionPlanningModel<FlowerPicker> {
-        // - state
-        public int flowersPicked { get; set; } = 0;
-        public int bucket { get; set; } = 0;
+namespace Ducia.Tests.Layers.Plan; 
 
-        // - const
-        public const int BUCKET_CAPACITY = 4;
-        public const int PICK_COST = 1;
-        public const int DUMP_COST = 6;
+/// <summary>
+///     picking flowers
+/// </summary>
+public class FlowerPicker : SmartActionPlanningModel<FlowerPicker> {
+    // - const
+    public const int BUCKET_CAPACITY = 4;
+    public const int PICK_COST = 1;
 
-        protected override Option[] ActionOptions => new Option[] {pickFlower, dumpBucket};
+    public const int DUMP_COST = 6;
 
-        public Cost pickFlower() {
-            // precondition
-            if (bucket >= BUCKET_CAPACITY) return false;
+    // - state
+    public int flowersPicked { get; set; }
+    public int bucket { get; set; }
 
-            // action
-            bucket++;
+    protected override Option[] ActionOptions => new Option[] { pickFlower, dumpBucket };
 
-            // cost
-            return PICK_COST;
-        }
+    public Cost pickFlower() {
+        // precondition
+        if (bucket >= BUCKET_CAPACITY) return false;
 
-        public Cost dumpBucket() {
-            // precondition
-            if (bucket == 0) return false;
+        // action
+        bucket++;
 
-            // action
-            flowersPicked += bucket;
-            bucket = 0;
+        // cost
+        return PICK_COST;
+    }
 
-            // cost
-            return DUMP_COST;
-        }
+    public Cost dumpBucket() {
+        // precondition
+        if (bucket == 0) return false;
+
+        // action
+        flowersPicked += bucket;
+        bucket = 0;
+
+        // cost
+        return DUMP_COST;
     }
 }
